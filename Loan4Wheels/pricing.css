@@ -1,0 +1,180 @@
+/* ===== VARIABLES ===== */
+:root {
+  --color-fondo: #F5F0E8;
+  --color-primario: #1B2A4A;
+  --color-hover: #2E4A7A;
+  --color-texto: #2C2C2C;
+}
+
+/* ===== GENERAL ===== */
+body {
+  background-color: var(--color-fondo);
+  background-image: none;
+  color: var(--color-texto);
+  font-family: 'Lato', sans-serif;
+}
+
+/* ===== TIPOGRAFÍA ===== */
+h1, h2, h3, h4, h5 {
+  font-family: 'Cormorant Garamond', serif;
+}
+
+/* ===== CONTENEDOR ===== */
+.container {
+  max-width: 960px;
+}
+
+/* ===== HEADER ===== */
+.pricing-header {
+  max-width: 700px;
+}
+
+.pricing-header h1 {
+  font-size: 3.5rem;
+  font-weight: 600;
+  letter-spacing: 2px;
+}
+
+.pricing-header p {
+  font-family: 'Lato', sans-serif;
+  font-weight: 300;
+  color: var(--color-texto);
+}
+
+/* ===== NAVBAR ===== */
+nav a {
+  font-family: 'Lato', sans-serif;
+  font-weight: 300;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  font-size: 0.85rem;
+  color: var(--color-texto) !important;
+  transition: color 0.3s ease;
+}
+
+nav a:hover {
+  color: var(--color-primario) !important;
+}
+
+/* ===== TARJETAS ===== */
+.card {
+  border-color: #D9D3C7;
+  background-color: #FDFAF5;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.card-body {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+}
+
+.card-body .btn {
+  margin-top: auto;
+}
+
+.card-header {
+  background-color: var(--color-fondo);
+  border-bottom: 1px solid #D9D3C7;
+  font-family: 'Cormorant Garamond', serif;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+}
+
+.card-header.text-bg-primary {
+  background-color: var(--color-primario) !important;
+  color: #F5F0E8 !important;
+}
+
+.pricing-card-title {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 3rem;
+  color: var(--color-primario);
+}
+
+.card-img-top {
+  height: 200px;
+  object-fit: cover;
+}
+
+/* ===== BOTONES ===== */
+.btn-primary {
+  background-color: var(--color-primario);
+  border-color: var(--color-primario);
+  font-family: 'Lato', sans-serif;
+  font-weight: 300;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  font-size: 0.85rem;
+  transition: all 0.3s ease;
+}
+
+.btn-primary:hover {
+  background-color: var(--color-hover);
+  border-color: var(--color-hover);
+}
+
+.btn-outline-primary {
+  border-color: var(--color-primario);
+  color: var(--color-primario);
+  font-family: 'Lato', sans-serif;
+  font-weight: 300;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  font-size: 0.85rem;
+  transition: all 0.3s ease;
+}
+
+.btn-outline-primary:hover {
+  background-color: var(--color-primario);
+  border-color: var(--color-primario);
+}
+
+/* ===== TABLA ===== */
+.table {
+  font-family: 'Lato', sans-serif;
+  font-weight: 300;
+  border: 3px solid #1B2A4A;
+}
+
+.table thead th {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 1.2rem;
+  letter-spacing: 1px;
+  color: var(--color-primario);
+  border-bottom: 2px solid var(--color-primario);
+}
+
+
+
+/* ===== FILAS ===== */
+.row {
+  row-gap: 1.5rem;
+}
+
+/* ===== FOOTER ===== */
+footer {
+  border-color: #D9D3C7 !important;
+}
+
+footer h5 {
+  font-family: 'Cormorant Garamond', serif;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  font-size: 0.9rem;
+  color: var(--color-primario);
+}
+
+footer a {
+  font-family: 'Lato', sans-serif;
+  font-weight: 300;
+  font-size: 0.85rem;
+  transition: color 0.3s ease;
+}
+
+footer a:hover {
+  color: var(--color-primario) !important;
+}
+

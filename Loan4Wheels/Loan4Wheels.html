@@ -1,0 +1,1286 @@
+<!doctype html>
+<html lang="en" data-bs-theme="light">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="description" content="" />
+    <meta
+      name="author"
+      content="Mark Otto, Jacob Thornton, and Bootstrap contributors"
+    />
+    <meta name="generator" content="Astro v5.13.2" />
+    <title>Loan4Wheels</title>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;600;700&family=Lato:wght@300;400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <meta name="theme-color" content="#712cf9" />
+    <link href="pricing.css" rel="stylesheet" />
+    <style>
+      
+      .bi {
+        vertical-align: -0.125em;
+        fill: currentColor;
+      }
+      </style>
+  </head>
+  <body>
+   <svg xmlns="http://www.w3.org/2000/svg" class="d-none">
+      <symbol id="check" viewBox="0 0 16 16">
+        <title>Check</title>
+        <path
+          d="M13.854 3.646a.5.5 0 0 1 0 .708l-7 7a.5.5 0 0 1-.708 0l-3.5-3.5a.5.5 0 1 1 .708-.708L6.5 10.293l6.646-6.647a.5.5 0 0 1 .708 0z"
+        ></path>
+      </symbol>
+    </svg>
+    <div class="container py-3">
+      <header>
+        <div
+          class="d-flex flex-column flex-md-row align-items-center pb-3 mb-4 border-bottom"
+        >
+          <a
+            href="Loan4Wheels.html"
+            class="d-flex align-items-center link-body-emphasis text-decoration-none"
+          >
+            <span class="fs-4"><i class="bi bi-car-front me-2 fs-3"></i>Loan4Wheels</span>
+          </a>
+          <nav class="d-inline-flex mt-2 mt-md-0 ms-md-auto">
+    <a class="me-3 py-2 link-body-emphasis text-decoration-none" href="#" data-bs-toggle="modal" data-bs-target="#modalFlota">Nuestros Coches</a>
+    <a class="me-3 py-2 link-body-emphasis text-decoration-none" href="#" data-bs-toggle="modal" data-bs-target="#modalSoporte">Soporte</a>
+    <a class="py-2 link-body-emphasis text-decoration-none" href="#" data-bs-toggle="modal" data-bs-target="#modalContacto">Contacto</a>
+</nav>
+        </div>
+        <div class="pricing-header p-3 pb-md-4 mx-auto text-center">
+    <h1 class="display-4 fw-normal text-body-emphasis">Elige tu plan</h1>
+    <p class="fs-5 text-body-secondary">
+        Conduce el coche de tus sueños con una suscripción mensual. Sin compromisos, sin sorpresas.
+    </p>
+</div>
+      </header>
+      <main>
+        <div class="row row-cols-1 row-cols-md-3 mb-3 text-center">
+  <div class="col">
+    <div class="card mb-4 rounded-3 shadow-sm">
+      <div class="card-header py-3">
+        <h4 class="my-0 fw-normal">Básico</h4>
+      </div>
+      <div class="card-body">
+        <h1 class="card-title pricing-card-title">
+          199€<small class="text-body-secondary fw-light">/mes</small>
+        </h1>
+        <ul class="list-unstyled mt-3 mb-4">
+          <li>Acceso a utilitarios</li>
+          <li>1 conductor</li>
+          <li>500 km/mes</li>
+          <li>Seguro básico incluido</li>
+          <li>Asistencia en carretera</li>
+        </ul>
+        <button type="button" class="w-100 btn btn-lg btn-outline-primary" onclick="abrirModal('Básico')">
+  Empezar
+</button>
+      </div>
+    </div>
+  </div>
+  <div class="col">
+    <div class="card mb-4 rounded-3 shadow-sm">
+      <div class="card-header py-3">
+        <h4 class="my-0 fw-normal">Pro</h4>
+      </div>
+      <div class="card-body">
+        <h1 class="card-title pricing-card-title">
+          499€<small class="text-body-secondary fw-light">/mes</small>
+        </h1>
+        <ul class="list-unstyled mt-3 mb-4">
+          <li>Acceso a SUVs y sedanes</li>
+          <li>2 conductores</li>
+          <li>1.500 km/mes</li>
+          <li>Seguro a todo riesgo</li>
+          <li>Asistencia en carretera</li>
+        </ul>
+        <button type="button" class="w-100 btn btn-lg btn-primary" onclick="abrirModal('Pro')">
+  Empezar
+</button>
+      </div>
+    </div>
+  </div>
+  <div class="col">
+    <div class="card mb-4 rounded-3 shadow-sm border-primary">
+      <div class="card-header py-3 text-bg-primary border-primary">
+        <h4 class="my-0 fw-normal">Élite</h4>
+      </div>
+      <div class="card-body">
+        <h1 class="card-title pricing-card-title">
+          999€<small class="text-body-secondary fw-light">/mes</small>
+        </h1>
+        <ul class="list-unstyled mt-3 mb-4">
+          <li>Acceso a deportivos y lujo</li>
+          <li>3 conductores</li>
+          <li>Km ilimitados</li>
+          <li>Seguro premium</li>
+          <li>Asistencia 24h</li>
+          <li>Cambio de coche mensual</li>
+        </ul>
+        <button type="button" class="w-100 btn btn-lg btn-primary" onclick="abrirModal('Élite')">
+  Empezar
+</button>
+      </div>
+    </div>
+  </div>
+</div>
+        <h2 class="display-6 text-center mb-4">Comparación de planes</h2>
+        <div class="table-responsive">
+  <table class="table text-center">
+    <thead>
+      <tr>
+        <th style="width: 34%"></th>
+        <th style="width: 22%">Básico</th>
+        <th style="width: 22%">Pro</th>
+        <th style="width: 22%">Élite</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <th scope="row" class="text-start">Acceso a utilitarios</th>
+        <td><svg class="bi" width="24" height="24" role="img" aria-label="Incluido"><use xlink:href="#check"></use></svg></td>
+        <td><svg class="bi" width="24" height="24" role="img" aria-label="Incluido"><use xlink:href="#check"></use></svg></td>
+        <td><svg class="bi" width="24" height="24" role="img" aria-label="Incluido"><use xlink:href="#check"></use></svg></td>
+      </tr>
+      <tr>
+        <th scope="row" class="text-start">Acceso a SUVs y sedanes</th>
+        <td></td>
+        <td><svg class="bi" width="24" height="24" role="img" aria-label="Incluido"><use xlink:href="#check"></use></svg></td>
+        <td><svg class="bi" width="24" height="24" role="img" aria-label="Incluido"><use xlink:href="#check"></use></svg></td>
+      </tr>
+      <tr>
+        <th scope="row" class="text-start">Acceso a deportivos y lujo</th>
+        <td></td>
+        <td></td>
+        <td><svg class="bi" width="24" height="24" role="img" aria-label="Incluido"><use xlink:href="#check"></use></svg></td>
+      </tr>
+      <tr>
+        <th scope="row" class="text-start">Seguro básico</th>
+        <td><svg class="bi" width="24" height="24" role="img" aria-label="Incluido"><use xlink:href="#check"></use></svg></td>
+        <td><svg class="bi" width="24" height="24" role="img" aria-label="Incluido"><use xlink:href="#check"></use></svg></td>
+        <td><svg class="bi" width="24" height="24" role="img" aria-label="Incluido"><use xlink:href="#check"></use></svg></td>
+      </tr>
+      <tr>
+        <th scope="row" class="text-start">Seguro a todo riesgo</th>
+        <td></td>
+        <td><svg class="bi" width="24" height="24" role="img" aria-label="Incluido"><use xlink:href="#check"></use></svg></td>
+        <td><svg class="bi" width="24" height="24" role="img" aria-label="Incluido"><use xlink:href="#check"></use></svg></td>
+      </tr>
+      <tr>
+        <th scope="row" class="text-start">Seguro premium</th>
+        <td></td>
+        <td></td>
+        <td><svg class="bi" width="24" height="24" role="img" aria-label="Incluido"><use xlink:href="#check"></use></svg></td>
+      </tr>
+      <tr>
+        <th scope="row" class="text-start">Asistencia en carretera</th>
+  <td><svg class="bi" width="24" height="24" role="img" aria-label="Incluido"><use xlink:href="#check"></use></svg></td>
+  <td><svg class="bi" width="24" height="24" role="img" aria-label="Incluido"><use xlink:href="#check"></use></svg></td>
+  <td><svg class="bi" width="24" height="24" role="img" aria-label="Incluido"><use xlink:href="#check"></use></svg></td>
+      </tr>
+      <tr>
+        <th scope="row" class="text-start">Asistencia 24h</th>
+        <td></td>
+        <td></td>
+        <td><svg class="bi" width="24" height="24" role="img" aria-label="Incluido"><use xlink:href="#check"></use></svg></td>
+      </tr>
+      <tr>
+        <th scope="row" class="text-start">Entrega a domicilio</th>
+        <td></td>
+        <td></td>
+        <td><svg class="bi" width="24" height="24" role="img" aria-label="Incluido"><use xlink:href="#check"></use></svg></td>
+      </tr>
+      <tr>
+        <th scope="row" class="text-start">Cancelación gratuita</th>
+        <td></td>
+        <td><svg class="bi" width="24" height="24" role="img" aria-label="Incluido"><use xlink:href="#check"></use></svg></td>
+        <td><svg class="bi" width="24" height="24" role="img" aria-label="Incluido"><use xlink:href="#check"></use></svg></td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+      </main>
+      <footer class="pt-4 my-md-5 pt-md-5 border-top">
+  <div class="row">
+    <div class="col-12 col-md">
+      <i class="bi bi-car-front mb-2 fs-3"></i>
+      <span class="fs-5 fw-bold d-block">Loan4Wheels</span>
+      <small class="d-block mb-3 text-body-secondary">&copy; 2025 Loan4Wheels</small>
+    </div>
+    
+    <div class="col-6 col-md">
+      <h5>Empresa</h5>
+      <ul class="list-unstyled text-small">
+        <li class="mb-1"><a class="link-secondary text-decoration-none" href="#" data-bs-toggle="modal" data-bs-target="#modalSobreNosotros">Sobre nosotros</a></li>
+<li class="mb-1"><a class="link-secondary text-decoration-none" href="#" data-bs-toggle="modal" data-bs-target="#modalTrabaja">Trabaja con nosotros</a></li>
+      </ul>
+    </div>
+    <div class="col-6 col-md">
+      <h5>Legal</h5>
+      <ul class="list-unstyled text-small">
+        <li class="mb-1"><a class="link-secondary text-decoration-none" href="#" data-bs-toggle="modal" data-bs-target="#modalPrivacidad">Privacidad</a></li>
+<li class="mb-1"><a class="link-secondary text-decoration-none" href="#" data-bs-toggle="modal" data-bs-target="#modalTerminos">Términos</a></li>
+<li class="mb-1"><a class="link-secondary text-decoration-none" href="#" data-bs-toggle="modal" data-bs-target="#modalCookies">Cookies</a></li>
+      </ul>
+    </div>
+  </div>
+</footer>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+    <div class="modal fade" id="modalFlota" tabindex="-1" aria-labelledby="modalFlotaLabel" aria-hidden="true">
+  <div class="modal-dialog modal-xl modal-dialog-scrollable">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h4 class="modal-title" id="modalFlotaLabel">Nuestros Coches</h4>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Cerrar"></button>
+      </div>
+      <div class="modal-body">
+
+        
+        <h5 class="mb-3 mt-2">Utilitarios</h5>
+        <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-4 mb-4">
+
+          <div class="col">
+            <div class="card h-100">
+              <img src="img/ibiza.jpg" class="card-img-top" alt="Seat Ibiza">
+              <div class="card-body">
+                <h6 class="card-title">Seat Ibiza</h6>
+                <p class="card-text small">Utilitario compacto y ágil, perfecto para la ciudad.</p>
+                <ul class="list-unstyled small">
+                  <li>🐎 95 CV</li>
+                  <li>⚙️ Tracción FWD</li>
+                  <li>⚡ Manual</li>
+                  <li>🏁 0-100: 10.5s</li>
+                  <li>💨 Vmáx: 185 km/h</li>
+                  <li>📦 Plan: Básico, Pro y Élite</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+
+          <div class="col">
+            <div class="card h-100">
+              <img src="img/yaris.jpg" class="card-img-top" alt="Toyota Yaris">
+              <div class="card-body">
+                <h6 class="card-title">Toyota Yaris</h6>
+                <p class="card-text small">Híbrido fiable y eficiente, ideal para el día a día.</p>
+                <ul class="list-unstyled small">
+                  <li>🐎 116 CV</li>
+                  <li>⚙️ Tracción FWD</li>
+                  <li>⚡ Automático</li>
+                  <li>🏁 0-100: 9.7s</li>
+                  <li>💨 Vmáx: 175 km/h</li>
+                  <li>📦 Plan: Básico, Pro y Élite</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+
+          <div class="col">
+            <div class="card h-100">
+              <img src="img/clio.jpg" class="card-img-top" alt="Renault Clio">
+              <div class="card-body">
+                <h6 class="card-title">Renault Clio</h6>
+                <p class="card-text small">Clásico francés con diseño moderno y gran confort.</p>
+                <ul class="list-unstyled small">
+                  <li>🐎 90 CV</li>
+                  <li>⚙️ Tracción FWD</li>
+                  <li>⚡ Manual</li>
+                  <li>🏁 0-100: 11.2s</li>
+                  <li>💨 Vmáx: 180 km/h</li>
+                  <li>📦 Plan: Básico, Pro y Élite</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+
+          <div class="col">
+            <div class="card h-100">
+              <img src="img/308.jpg" class="card-img-top" alt="Peugeot 308">
+              <div class="card-body">
+                <h6 class="card-title">Peugeot 308</h6>
+                <p class="card-text small">Diseño atrevido y tecnología avanzada en segmento C.</p>
+                <ul class="list-unstyled small">
+                  <li>🐎 130 CV</li>
+                  <li>⚙️ Tracción FWD</li>
+                  <li>⚡ Automático</li>
+                  <li>🏁 0-100: 9.1s</li>
+                  <li>💨 Vmáx: 210 km/h</li>
+                  <li>📦 Plan: Básico, Pro y Élite</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+
+          <div class="col">
+            <div class="card h-100">
+              <img src="img/i20.jpg" class="card-img-top" alt="Hyundai i20">
+              <div class="card-body">
+                <h6 class="card-title">Hyundai i20</h6>
+                <p class="card-text small">Compacto coreano con gran equipamiento de serie.</p>
+                <ul class="list-unstyled small">
+                  <li>🐎 100 CV</li>
+                  <li>⚙️ Tracción FWD</li>
+                  <li>⚡ Manual</li>
+                  <li>🏁 0-100: 10.8s</li>
+                  <li>💨 Vmáx: 183 km/h</li>
+                  <li>📦 Plan: Básico, Pro y Élite</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+
+          <div class="col">
+            <div class="card h-100">
+              <img src="img/mazda3.jpg" class="card-img-top" alt="Mazda 3">
+              <div class="card-body">
+                <h6 class="card-title">Mazda 3</h6>
+                <p class="card-text small">Diseño premium y conducción dinámica en su clase.</p>
+                <ul class="list-unstyled small">
+                  <li>🐎 122 CV</li>
+                  <li>⚙️ Tracción FWD</li>
+                  <li>⚡ Automático</li>
+                  <li>🏁 0-100: 9.4s</li>
+                  <li>💨 Vmáx: 200 km/h</li>
+                  <li>📦 Plan: Básico, Pro y Élite</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+
+          <div class="col">
+            <div class="card h-100">
+              <img src="img/a3.jpg" class="card-img-top" alt="Audi A3">
+              <div class="card-body">
+                <h6 class="card-title">Audi A3</h6>
+                <p class="card-text small">Lo mejor de la ingeniería alemana en formato compacto.</p>
+                <ul class="list-unstyled small">
+                  <li>🐎 150 CV</li>
+                  <li>⚙️ Tracción FWD</li>
+                  <li>⚡ Automático</li>
+                  <li>🏁 0-100: 8.4s</li>
+                  <li>💨 Vmáx: 224 km/h</li>
+                  <li>📦 Plan: Básico, Pro y Élite</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+
+          <div class="col">
+            <div class="card h-100">
+              <img src="img/golf.jpg" class="card-img-top" alt="Volkswagen Golf">
+              <div class="card-body">
+                <h6 class="card-title">Volkswagen Golf</h6>
+                <p class="card-text small">El referente del segmento compacto desde hace décadas.</p>
+                <ul class="list-unstyled small">
+                  <li>🐎 150 CV</li>
+                  <li>⚙️ Tracción FWD</li>
+                  <li>⚡ Automático</li>
+                  <li>🏁 0-100: 8.5s</li>
+                  <li>💨 Vmáx: 224 km/h</li>
+                  <li>📦 Plan: Básico, Pro y Élite</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+
+          <div class="col">
+  <div class="card h-100">
+    <img src="img/mito.jpg" class="card-img-top" alt="Alfa Romeo Mito Quadrifoglio">
+    <div class="card-body">
+      <h6 class="card-title">Alfa Romeo Mito QV</h6>
+      <p class="card-text small">El utilitario italiano más deportivo, con alma de competición.</p>
+      <ul class="list-unstyled small">
+        <li>🐎 170 CV</li>
+        <li>⚙️ Tracción FWD</li>
+        <li>⚡ Manual</li>
+        <li>🏁 0-100: 7.5s</li>
+        <li>💨 Vmáx: 230 km/h</li>
+        <li>📦 Plan: Básico, Pro y Élite</li>
+      </ul>
+    </div>
+  </div>
+</div>
+
+        </div>
+
+        
+        <h5 class="mb-3 mt-2">SUVs</h5>
+        <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-4 mb-4">
+
+          <div class="col">
+            <div class="card h-100">
+              <img src="img/x3.jpg" class="card-img-top" alt="BMW X3">
+              <div class="card-body">
+                <h6 class="card-title">BMW X3</h6>
+                <p class="card-text small">SUV premium alemán con gran dinamismo y confort.</p>
+                <ul class="list-unstyled small">
+                  <li>🐎 184 CV</li>
+                  <li>⚙️ Tracción AWD</li>
+                  <li>⚡ Automático</li>
+                  <li>🏁 0-100: 7.9s</li>
+                  <li>💨 Vmáx: 215 km/h</li>
+                  <li>📦 Plan: Pro y Élite</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+
+          <div class="col">
+            <div class="card h-100">
+              <img src="img/tcross.jpg" class="card-img-top" alt="VW T-Cross">
+              <div class="card-body">
+                <h6 class="card-title">Volkswagen T-Cross</h6>
+                <p class="card-text small">SUV urbano con gran espacio interior y conectividad.</p>
+                <ul class="list-unstyled small">
+                  <li>🐎 116 CV</li>
+                  <li>⚙️ Tracción FWD</li>
+                  <li>⚡ Automático</li>
+                  <li>🏁 0-100: 10.2s</li>
+                  <li>💨 Vmáx: 193 km/h</li>
+                  <li>📦 Plan: Pro y Élite</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+
+          <div class="col">
+            <div class="card h-100">
+              <img src="img/q3.jpg" class="card-img-top" alt="Audi Q3">
+              <div class="card-body">
+                <h6 class="card-title">Audi Q3</h6>
+                <p class="card-text small">Elegancia y tecnología Audi en formato SUV compacto.</p>
+                <ul class="list-unstyled small">
+                  <li>🐎 150 CV</li>
+                  <li>⚙️ Tracción FWD</li>
+                  <li>⚡ Automático</li>
+                  <li>🏁 0-100: 9.0s</li>
+                  <li>💨 Vmáx: 210 km/h</li>
+                  <li>📦 Plan: Pro y Élite</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+
+          <div class="col">
+            <div class="card h-100">
+              <img src="img/qashqai.jpg" class="card-img-top" alt="Nissan Qashqai">
+              <div class="card-body">
+                <h6 class="card-title">Nissan Qashqai</h6>
+                <p class="card-text small">El SUV más vendido de Europa, versátil y fiable.</p>
+                <ul class="list-unstyled small">
+                  <li>🐎 158 CV</li>
+                  <li>⚙️ Tracción FWD</li>
+                  <li>⚡ Automático</li>
+                  <li>🏁 0-100: 9.1s</li>
+                  <li>💨 Vmáx: 200 km/h</li>
+                  <li>📦 Plan: Pro y Élite</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+
+          <div class="col">
+            <div class="card h-100">
+              <img src="img/rangerover.jpg" class="card-img-top" alt="Range Rover Sport">
+              <div class="card-body">
+                <h6 class="card-title">Range Rover Sport</h6>
+                <p class="card-text small">SUV británico de lujo con capacidades off-road excepcionales.</p>
+                <ul class="list-unstyled small">
+                  <li>🐎 300 CV</li>
+                  <li>⚙️ Tracción AWD</li>
+                  <li>⚡ Automático</li>
+                  <li>🏁 0-100: 6.5s</li>
+                  <li>💨 Vmáx: 220 km/h</li>
+                  <li>📦 Plan: Pro y Élite</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+
+          <div class="col">
+            <div class="card h-100">
+              <img src="img/macan.jpg" class="card-img-top" alt="Porsche Macan">
+              <div class="card-body">
+                <h6 class="card-title">Porsche Macan</h6>
+                <p class="card-text small">El SUV más deportivo del mercado, ADN Porsche puro.</p>
+                <ul class="list-unstyled small">
+                  <li>🐎 265 CV</li>
+                  <li>⚙️ Tracción AWD</li>
+                  <li>⚡ Automático</li>
+                  <li>🏁 0-100: 6.2s</li>
+                  <li>💨 Vmáx: 229 km/h</li>
+                  <li>📦 Plan: Pro y Élite</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+        
+        <h5 class="mb-3 mt-2">Berlinas</h5>
+        <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-4 mb-4">
+
+          <div class="col">
+            <div class="card h-100">
+              <img src="img/serie3.jpg" class="card-img-top" alt="BMW Serie 3">
+              <div class="card-body">
+                <h6 class="card-title">BMW Serie 3</h6>
+                <p class="card-text small">La berlina deportiva por excelencia, icono de BMW.</p>
+                <ul class="list-unstyled small">
+                  <li>🐎 184 CV</li>
+                  <li>⚙️ Tracción RWD</li>
+                  <li>⚡ Automático</li>
+                  <li>🏁 0-100: 7.1s</li>
+                  <li>💨 Vmáx: 230 km/h</li>
+                  <li>📦 Plan: Pro y Élite</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+
+          <div class="col">
+            <div class="card h-100">
+              <img src="img/c220.jpg" class="card-img-top" alt="Mercedes C220">
+              <div class="card-body">
+                <h6 class="card-title">Mercedes C220</h6>
+                <p class="card-text small">Elegancia y tecnología Mercedes en su máxima expresión.</p>
+                <ul class="list-unstyled small">
+                  <li>🐎 200 CV</li>
+                  <li>⚙️ Tracción RWD</li>
+                  <li>⚡ Automático</li>
+                  <li>🏁 0-100: 7.3s</li>
+                  <li>💨 Vmáx: 240 km/h</li>
+                  <li>📦 Plan: Pro y Élite</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+
+          <div class="col">
+            <div class="card h-100">
+              <img src="img/a5.jpg" class="card-img-top" alt="Audi A5">
+              <div class="card-body">
+                <h6 class="card-title">Audi A5</h6>
+                <p class="card-text small">Coupé/berlina con diseño escultural y gran refinamiento.</p>
+                <ul class="list-unstyled small">
+                  <li>🐎 204 CV</li>
+                  <li>⚙️ Tracción FWD</li>
+                  <li>⚡ Automático</li>
+                  <li>🏁 0-100: 7.0s</li>
+                  <li>💨 Vmáx: 245 km/h</li>
+                  <li>📦 Plan: Pro y Élite</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+
+          <div class="col">
+            <div class="card h-100">
+              <img src="img/giulia.jpg" class="card-img-top" alt="Alfa Romeo Giulia">
+              <div class="card-body">
+                <h6 class="card-title">Alfa Romeo Giulia</h6>
+                <p class="card-text small">Pasión italiana con alma deportiva y diseño inconfundible.</p>
+                <ul class="list-unstyled small">
+                  <li>🐎 200 CV</li>
+                  <li>⚙️ Tracción RWD</li>
+                  <li>⚡ Automático</li>
+                  <li>🏁 0-100: 6.6s</li>
+                  <li>💨 Vmáx: 240 km/h</li>
+                  <li>📦 Plan: Pro y Élite</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+
+          <div class="col">
+            <div class="card h-100">
+              <img src="img/passat.jpg" class="card-img-top" alt="Volkswagen Passat">
+              <div class="card-body">
+                <h6 class="card-title">Volkswagen Passat</h6>
+                <p class="card-text small">La berlina familiar alemana más equilibrada del mercado.</p>
+                <ul class="list-unstyled small">
+                  <li>🐎 150 CV</li>
+                  <li>⚙️ Tracción FWD</li>
+                  <li>⚡ Automático</li>
+                  <li>🏁 0-100: 8.9s</li>
+                  <li>💨 Vmáx: 222 km/h</li>
+                  <li>📦 Plan: Pro y Élite</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+
+          <div class="col">
+            <div class="card h-100">
+              <img src="img/s60.jpg" class="card-img-top" alt="Volvo S60">
+              <div class="card-body">
+                <h6 class="card-title">Volvo S60</h6>
+                <p class="card-text small">Berlina escandinava con máxima seguridad y confort.</p>
+                <ul class="list-unstyled small">
+                  <li>🐎 250 CV</li>
+                  <li>⚙️ Tracción AWD</li>
+                  <li>⚡ Automático</li>
+                  <li>🏁 0-100: 6.5s</li>
+                  <li>💨 Vmáx: 230 km/h</li>
+                  <li>📦 Plan: Pro y Élite</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+        
+        <h5 class="mb-3 mt-2">Deportivos</h5>
+        <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-4 mb-4">
+
+          <div class="col">
+            <div class="card h-100">
+              <img src="img/911.jpg" class="card-img-top" alt="Porsche 911 Carrera">
+              <div class="card-body">
+                <h6 class="card-title">Porsche 911 Carrera (930)</h6>
+                <p class="card-text small">El deportivo más icónico de la historia del automóvil.</p>
+                <ul class="list-unstyled small">
+                  <li>🐎 260 CV</li>
+                  <li>⚙️ Tracción RWD</li>
+                  <li>⚡ Manual</li>
+                  <li>🏁 0-100: 4.2s</li>
+                  <li>💨 Vmáx: 250 km/h</li>
+                  <li>📦 Plan: Élite</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+
+          <div class="col">
+            <div class="card h-100">
+              <img src="img/enzo.jpg" class="card-img-top" alt="Ferrari Enzo">
+              <div class="card-body">
+                <h6 class="card-title">Ferrari Enzo</h6>
+                <p class="card-text small">Superdeportivo italiano que lleva el nombre del fundador.</p>
+                <ul class="list-unstyled small">
+                  <li>🐎 660 CV</li>
+                  <li>⚙️ Tracción RWD</li>
+                  <li>⚡ Automático</li>
+                  <li>🏁 0-100: 3.6s</li>
+                  <li>💨 Vmáx: 350 km/h</li>
+                  <li>📦 Plan: Élite</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+
+          <div class="col">
+            <div class="card h-100">
+              <img src="img/aventador.jpg" class="card-img-top" alt="Lamborghini Aventador">
+              <div class="card-body">
+                <h6 class="card-title">Lamborghini Aventador</h6>
+                <p class="card-text small">El toro más salvaje de Sant'Agata Bolognese.</p>
+                <ul class="list-unstyled small">
+                  <li>🐎 700 CV</li>
+                  <li>⚙️ Tracción AWD</li>
+                  <li>⚡ Automático</li>
+                  <li>🏁 0-100: 2.9s</li>
+                  <li>💨 Vmáx: 350 km/h</li>
+                  <li>📦 Plan: Élite</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+
+          <div class="col">
+            <div class="card h-100">
+              <img src="img/nsx.jpg" class="card-img-top" alt="Honda NSX">
+              <div class="card-body">
+                <h6 class="card-title">Honda NSX</h6>
+                <p class="card-text small">El superdeportivo japonés desarrollado con Ayrton Senna, icono de los años 90.</p>
+<ul class="list-unstyled small">
+  <li>🐎 274 CV</li>
+  <li>⚙️ Tracción RWD</li>
+  <li>⚡ Manual</li>
+  <li>🏁 0-100: 5.7s</li>
+  <li>💨 Vmáx: 270 km/h</li>
+                  <li>📦 Plan: Élite</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+
+          <div class="col">
+            <div class="card h-100">
+              <img src="img/huayra.jpg" class="card-img-top" alt="Pagani Huayra">
+              <div class="card-body">
+                <h6 class="card-title">Pagani Huayra</h6>
+                <p class="card-text small">Obra de arte italiana con motor AMG y chasis de carbono.</p>
+                <ul class="list-unstyled small">
+                  <li>🐎 730 CV</li>
+                  <li>⚙️ Tracción RWD</li>
+                  <li>⚡ Automático</li>
+                  <li>🏁 0-100: 3.3s</li>
+                  <li>💨 Vmáx: 370 km/h</li>
+                  <li>📦 Plan: Élite</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+
+          <div class="col">
+            <div class="card h-100">
+              <img src="img/mc20.jpg" class="card-img-top" alt="Maserati MC20">
+              <div class="card-body">
+                <h6 class="card-title">Maserati MC20</h6>
+                <p class="card-text small">El renacimiento de Maserati en el mundo de los superdeportivos.</p>
+                <ul class="list-unstyled small">
+                  <li>🐎 630 CV</li>
+                  <li>⚙️ Tracción RWD</li>
+                  <li>⚡ Automático</li>
+                  <li>🏁 0-100: 2.9s</li>
+                  <li>💨 Vmáx: 325 km/h</li>
+                  <li>📦 Plan: Élite</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+
+          <div class="col">
+            <div class="card h-100">
+              <img src="img/720s.jpg" class="card-img-top" alt="McLaren 720S">
+              <div class="card-body">
+                <h6 class="card-title">McLaren 720S</h6>
+                <p class="card-text small">Tecnología de Fórmula 1 en un superdeportivo de calle.</p>
+                <ul class="list-unstyled small">
+                  <li>🐎 720 CV</li>
+                  <li>⚙️ Tracción RWD</li>
+                  <li>⚡ Automático</li>
+                  <li>🏁 0-100: 2.9s</li>
+                  <li>💨 Vmáx: 341 km/h</li>
+                  <li>📦 Plan: Élite</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+
+          <div class="col">
+            <div class="card h-100">
+              <img src="img/vantage.jpg" class="card-img-top" alt="Aston Martin Vantage">
+              <div class="card-body">
+                <h6 class="card-title">Aston Martin Vantage</h6>
+                <p class="card-text small">El deportivo británico más puro con alma de gran turismo.</p>
+                <ul class="list-unstyled small">
+                  <li>🐎 510 CV</li>
+                  <li>⚙️ Tracción RWD</li>
+                  <li>⚡ Automático</li>
+                  <li>🏁 0-100: 3.7s</li>
+                  <li>💨 Vmáx: 314 km/h</li>
+                  <li>📦 Plan: Élite</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+
+          <div class="col">
+  <div class="card h-100">
+    <img src="img/33stradale.jpg" class="card-img-top" alt="Alfa Romeo 33 Stradale">
+    <div class="card-body">
+      <h6 class="card-title">Alfa Romeo 33 Stradale</h6>
+      <p class="card-text small">Obra maestra italiana, renacimiento de una leyenda con tecnología del siglo XXI.</p>
+      <ul class="list-unstyled small">
+        <li>🐎 620 CV</li>
+        <li>⚙️ Tracción RWD</li>
+        <li>⚡ Automático</li>
+        <li>🏁 0-100: 3.4s</li>
+        <li>💨 Vmáx: 333 km/h</li>
+        <li>📦 Plan: Élite</li>
+      </ul>
+    </div>
+  </div>
+</div>
+
+        </div>
+
+        
+        <h5 class="mb-3 mt-2">Lujo</h5>
+        <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-4 mb-4">
+
+          <div class="col">
+            <div class="card h-100">
+              <img src="img/ghost.jpg" class="card-img-top" alt="Rolls-Royce Ghost">
+              <div class="card-body">
+                <h6 class="card-title">Rolls-Royce Ghost</h6>
+                <p class="card-text small">La cúspide del lujo automovilístico británico.</p>
+                <ul class="list-unstyled small">
+                  <li>🐎 571 CV</li>
+                  <li>⚙️ Tracción AWD</li>
+                  <li>⚡ Automático</li>
+                  <li>🏁 0-100: 4.8s</li>
+                  <li>💨 Vmáx: 250 km/h</li>
+                  <li>📦 Plan: Élite</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+
+          <div class="col">
+            <div class="card h-100">
+              <img src="img/continental.jpg" class="card-img-top" alt="Bentley Continental GT">
+              <div class="card-body">
+                <h6 class="card-title">Bentley Continental GT</h6>
+                <p class="card-text small">Gran turismo británico que combina lujo y rendimiento.</p>
+                <ul class="list-unstyled small">
+                  <li>🐎 550 CV</li>
+                  <li>⚙️ Tracción AWD</li>
+                  <li>⚡ Automático</li>
+                  <li>🏁 0-100: 4.0s</li>
+                  <li>💨 Vmáx: 318 km/h</li>
+                  <li>📦 Plan: Élite</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+
+          <div class="col">
+            <div class="card h-100">
+              <img src="img/maybach.jpg" class="card-img-top" alt="Mercedes-Maybach S680">
+              <div class="card-body">
+                <h6 class="card-title">Mercedes-Maybach S680</h6>
+                <p class="card-text small">La berlina de lujo más exclusiva de la estrella de tres puntas.</p>
+                <ul class="list-unstyled small">
+                  <li>🐎 612 CV</li>
+                  <li>⚙️ Tracción AWD</li>
+                  <li>⚡ Automático</li>
+                  <li>🏁 0-100: 4.5s</li>
+                  <li>💨 Vmáx: 250 km/h</li>
+                  <li>📦 Plan: Élite</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="modal fade" id="modalSoporte" tabindex="-1" aria-labelledby="modalSoporteLabel" aria-hidden="true">
+  <div class="modal-dialog modal-lg modal-dialog-scrollable">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h4 class="modal-title" id="modalSoporteLabel">Soporte</h4>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Cerrar"></button>
+      </div>
+      <div class="modal-body">
+        <div class="accordion" id="accordionFAQ">
+
+          <div class="accordion-item">
+            <h2 class="accordion-header">
+              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq1">
+                ¿Puedo cancelar mi suscripción en cualquier momento?
+              </button>
+            </h2>
+            <div id="faq1" class="accordion-collapse collapse" data-bs-parent="#accordionFAQ">
+              <div class="accordion-body">
+                Sí, puedes cancelar tu suscripción en cualquier momento sin penalización. La cancelación será efectiva al final del mes en curso.
+              </div>
+            </div>
+          </div>
+
+          <div class="accordion-item">
+            <h2 class="accordion-header">
+              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq2">
+                ¿Qué ocurre si tengo un accidente?
+              </button>
+            </h2>
+            <div id="faq2" class="accordion-collapse collapse" data-bs-parent="#accordionFAQ">
+              <div class="accordion-body">
+                Todos nuestros planes incluyen seguro. En caso de accidente, contacta con nuestro equipo de asistencia y nos encargamos de todo. Los gastos cubiertos dependen del plan contratado.
+              </div>
+            </div>
+          </div>
+
+          <div class="accordion-item">
+            <h2 class="accordion-header">
+              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq3">
+                ¿Puedo cambiar de plan?
+              </button>
+            </h2>
+            <div id="faq3" class="accordion-collapse collapse" data-bs-parent="#accordionFAQ">
+              <div class="accordion-body">
+                Sí, puedes subir o bajar de plan en cualquier momento desde tu área de cliente. El cambio será efectivo al inicio del siguiente mes.
+              </div>
+            </div>
+          </div>
+
+          <div class="accordion-item">
+            <h2 class="accordion-header">
+              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq4">
+                ¿Está incluido el combustible?
+              </button>
+            </h2>
+            <div id="faq4" class="accordion-collapse collapse" data-bs-parent="#accordionFAQ">
+              <div class="accordion-body">
+                No, el combustible no está incluido en ningún plan. El vehículo se entrega con el depósito lleno y debe devolverse en las mismas condiciones.
+              </div>
+            </div>
+          </div>
+
+          
+
+        </div>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="modal fade" id="modalContacto" tabindex="-1" aria-labelledby="modalContactoLabel" aria-hidden="true">
+  <div class="modal-dialog modal-lg">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h4 class="modal-title" id="modalContactoLabel">Contacto</h4>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Cerrar"></button>
+      </div>
+      <div class="modal-body">
+        <div class="row">
+          <div class="col-md-6 mb-4 mb-md-0">
+            <h5 class="mb-3">Datos de contacto</h5>
+            <ul class="list-unstyled">
+              <li class="mb-3"><i class="bi bi-telephone me-2"></i>+34 986 000 000</li>
+              <li class="mb-3"><i class="bi bi-envelope me-2"></i>contacto@loan4wheels.com</li>
+              <li class="mb-3"><i class="bi bi-geo-alt me-2"></i>Avenida de Madrid, 12, Vigo, Galicia</li>
+              <li class="mb-3"><i class="bi bi-clock me-2"></i>Lunes a Viernes 9:00 - 18:00</li>
+            </ul>
+          </div>
+          <div class="col-md-6">
+            <h5 class="mb-3">Envíanos un mensaje</h5>
+            <div class="mb-3">
+              <label class="form-label">Nombre</label>
+              <input type="text" class="form-control" placeholder="Tu nombre">
+            </div>
+            <div class="mb-3">
+              <label class="form-label">Email</label>
+              <input type="email" class="form-control" placeholder="Tu email">
+            </div>
+            <div class="mb-3">
+              <label class="form-label">Mensaje</label>
+              <textarea class="form-control" rows="3" placeholder="¿En qué podemos ayudarte?"></textarea>
+            </div>
+            <div id="mensajeEnviado" class="alert alert-success d-none">
+  ✅ Mensaje enviado correctamente. Nos pondremos en contacto contigo pronto.
+</div>
+<button type="button" class="w-100 btn btn-primary" onclick="enviarMensaje()">Enviar mensaje</button>
+          </div>
+        </div>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script>
+  const cochesBasic = [
+    "Seat Ibiza", "Toyota Yaris", "Renault Clio", "Peugeot 308",
+    "Hyundai i20", "Mazda 3", "Audi A3", "Volkswagen Golf",
+    "Alfa Romeo Mito QV"
+  ];
+
+  const cochesPro = [
+    ...cochesBasic,
+    "BMW X3", "Volkswagen T-Cross", "Audi Q3", "Nissan Qashqai",
+    "Range Rover Sport", "Porsche Macan",
+    "BMW Serie 3", "Mercedes C220", "Audi A5", "Alfa Romeo Giulia",
+    "Volkswagen Passat", "Volvo S60"
+  ];
+
+  const cochesElite = [
+    ...cochesPro,
+    "Porsche 911 Carrera (930)", "Ferrari Enzo", "Lamborghini Aventador",
+    "Honda NSX", "Pagani Huayra", "Maserati MC20", "McLaren 720S",
+    "Aston Martin Vantage", "Alfa Romeo 33 Stradale",
+    "Rolls-Royce Ghost", "Bentley Continental GT",
+    "Mercedes-Maybach S680"
+  ];
+
+  function abrirModal(plan) {
+    document.getElementById('planNombre').textContent = plan;
+    document.getElementById('mensajeSuscripcion').classList.add('d-none');
+
+    const select = document.getElementById('selectCoche');
+    select.innerHTML = '';
+
+    let coches = [];
+    if (plan === 'Básico') coches = cochesBasic;
+    else if (plan === 'Pro') coches = cochesPro;
+    else if (plan === 'Élite') coches = cochesElite;
+
+    coches.forEach(coche => {
+      const option = document.createElement('option');
+      option.value = coche;
+      option.textContent = coche;
+      select.appendChild(option);
+    });
+
+    new bootstrap.Modal(document.getElementById('modalEmpezar')).show();
+  }
+
+  function enviarMensaje() {
+    document.getElementById('mensajeEnviado').classList.remove('d-none');
+  }
+
+  function enviarTrabaja() {
+  document.getElementById('mensajeTrabaja').classList.remove('d-none');
+}
+
+window.continuarPago = function() {
+  bootstrap.Modal.getInstance(document.getElementById('modalEmpezar')).hide();
+  new bootstrap.Modal(document.getElementById('modalPago')).show();
+}
+
+window.confirmarPago = function() {
+  document.getElementById('mensajePago').classList.remove('d-none');
+}
+
+document.getElementById('modalPago').addEventListener('hidden.bs.modal', function () {
+  document.getElementById('mensajePago').classList.add('d-none');
+  this.querySelectorAll('input').forEach(el => el.value = '');
+});
+</script>
+
+<div class="modal fade" id="modalEmpezar" tabindex="-1" aria-labelledby="modalEmpezarLabel" aria-hidden="true">
+  <div class="modal-dialog modal-lg">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h4 class="modal-title" id="modalEmpezarLabel">Suscribirse — Plan <span id="planNombre"></span></h4>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Cerrar"></button>
+      </div>
+      <div class="modal-body">
+        <div class="row">
+          <div class="col-md-6 mb-3">
+            <label class="form-label">Nombre</label>
+            <input type="text" class="form-control" placeholder="Tu nombre">
+          </div>
+          <div class="col-md-6 mb-3">
+            <label class="form-label">Apellidos</label>
+            <input type="text" class="form-control" placeholder="Tus apellidos">
+          </div>
+          <div class="col-md-6 mb-3">
+            <label class="form-label">Email</label>
+            <input type="email" class="form-control" placeholder="Tu email">
+          </div>
+          <div class="col-md-6 mb-3">
+            <label class="form-label">Teléfono</label>
+            <input type="tel" class="form-control" placeholder="Tu teléfono">
+          </div>
+          <div class="col-md-6 mb-3">
+            <label class="form-label">DNI</label>
+            <input type="text" class="form-control" placeholder="Tu DNI">
+          </div>
+          <div class="col-md-6 mb-3">
+            <label class="form-label">Elige tu coche</label>
+            <select class="form-select" id="selectCoche">
+            </select>
+          </div>
+        </div>
+        <div id="mensajeSuscripcion" class="alert alert-success d-none">
+          ✅ Suscripción completada correctamente. ¡Bienvenido a Loan4Wheels!
+        </div>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancelar</button>
+        <button type="button" class="btn btn-primary" onclick="continuarPago()">Continuar con el pago</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="modal fade" id="modalSobreNosotros" tabindex="-1" aria-labelledby="modalSobreNosotrosLabel" aria-hidden="true">
+  <div class="modal-dialog modal-lg">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h4 class="modal-title" id="modalSobreNosotrosLabel">Sobre nosotros</h4>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Cerrar"></button>
+      </div>
+      <div class="modal-body">
+        <p>En Loan4Wheels creemos que conducir un buen coche no debería ser un lujo reservado a pocos. Por eso creamos un servicio de suscripción flexible, sin letra pequeña y sin compromisos.</p>
+        <p>Somos un equipo pequeño con las ideas muy claras: poner al cliente primero y hacer que cada trayecto valga la pena.</p>
+        <p>¿Cómo funciona? Elige tu plan, escoge tu coche y nosotros nos encargamos del resto.</p>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="modal fade" id="modalTrabaja" tabindex="-1" aria-labelledby="modalTrabajaLabel" aria-hidden="true">
+  <div class="modal-dialog modal-lg">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h4 class="modal-title" id="modalTrabajaLabel">Trabaja con nosotros</h4>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Cerrar"></button>
+      </div>
+      <div class="modal-body">
+        <div class="row">
+          <div class="col-md-6 mb-3">
+            <label class="form-label">Nombre</label>
+            <input type="text" class="form-control" placeholder="Tu nombre">
+          </div>
+          <div class="col-md-6 mb-3">
+            <label class="form-label">Apellidos</label>
+            <input type="text" class="form-control" placeholder="Tus apellidos">
+          </div>
+          <div class="col-md-6 mb-3">
+            <label class="form-label">Email</label>
+            <input type="email" class="form-control" placeholder="Tu email">
+          </div>
+          <div class="col-md-6 mb-3">
+            <label class="form-label">Teléfono</label>
+            <input type="tel" class="form-control" placeholder="Tu teléfono">
+          </div>
+          <div class="col-12 mb-3">
+            <label class="form-label">Puesto al que aplicas</label>
+            <input type="text" class="form-control" placeholder="Ej: Mecánico, Comercial, Atención al cliente...">
+          </div>
+          <div class="col-12 mb-3">
+            <label class="form-label">Carta de presentación</label>
+            <textarea class="form-control" rows="3" placeholder="Cuéntanos algo sobre ti..."></textarea>
+          </div>
+          <div class="col-12 mb-3">
+            <label class="form-label">Currículum</label>
+            <input type="file" class="form-control" accept=".pdf,.doc,.docx">
+          </div>
+        </div>
+        <div id="mensajeTrabaja" class="alert alert-success d-none">
+          ✅ Solicitud enviada correctamente. Nos pondremos en contacto contigo pronto.
+        </div>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancelar</button>
+        <button type="button" class="btn btn-primary" onclick="enviarTrabaja()">Enviar solicitud</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="modal fade" id="modalPrivacidad" tabindex="-1" aria-labelledby="modalPrivacidadLabel" aria-hidden="true">
+  <div class="modal-dialog modal-lg modal-dialog-scrollable">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h4 class="modal-title" id="modalPrivacidadLabel">Política de Privacidad</h4>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Cerrar"></button>
+      </div>
+      <div class="modal-body">
+        <p>En <strong>Loan4Wheels</strong> nos tomamos muy en serio la privacidad de nuestros usuarios. Esta política describe cómo recogemos, usamos y protegemos tu información personal.</p>
+        <h6><strong>Datos que recogemos</strong></h6>
+        <p>Recogemos los datos que nos proporcionas al registrarte o contactar con nosotros: nombre, apellidos, email, teléfono y DNI.</p>
+        <h6><strong>Uso de tus datos</strong></h6>
+        <p>Tus datos se utilizan únicamente para gestionar tu suscripción y comunicarnos contigo. No los compartimos con terceros sin tu consentimiento.</p>
+        <h6><strong>Tus derechos</strong></h6>
+        <p>Tienes derecho a acceder, rectificar y eliminar tus datos en cualquier momento contactando con nosotros en contacto@loan4wheels.com.</p>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="modal fade" id="modalTerminos" tabindex="-1" aria-labelledby="modalTerminosLabel" aria-hidden="true">
+  <div class="modal-dialog modal-lg modal-dialog-scrollable">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h4 class="modal-title" id="modalTerminosLabel">Términos y Condiciones</h4>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Cerrar"></button>
+      </div>
+      <div class="modal-body">
+        <p>Al usar los servicios de <strong>Loan4Wheels</strong> aceptas los siguientes términos y condiciones.</p>
+        <h6><strong>Suscripción</strong></h6>
+        <p>La suscripción se renueva automáticamente cada mes. Puedes cancelarla en cualquier momento desde tu área de cliente sin penalización.</p>
+        <h6><strong>Uso del vehículo</strong></h6>
+        <p>El vehículo debe usarse de forma responsable y conforme a la normativa de tráfico vigente. Cualquier multa o infracción será responsabilidad del usuario.</p>
+        <h6><strong>Responsabilidad</strong></h6>
+        <p>Loan4Wheels no se hace responsable de daños ocasionados por un uso indebido del vehículo fuera de las condiciones del seguro contratado.</p>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="modal fade" id="modalCookies" tabindex="-1" aria-labelledby="modalCookiesLabel" aria-hidden="true">
+  <div class="modal-dialog modal-lg modal-dialog-scrollable">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h4 class="modal-title" id="modalCookiesLabel">Política de Cookies</h4>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Cerrar"></button>
+      </div>
+      <div class="modal-body">
+        <p><strong>Loan4Wheels</strong> utiliza cookies para mejorar tu experiencia de navegación.</p>
+        <h6><strong>¿Qué son las cookies?</strong></h6>
+        <p>Las cookies son pequeños archivos que se almacenan en tu dispositivo cuando visitas nuestra página. Nos ayudan a recordar tus preferencias y mejorar el servicio.</p>
+        <h6>Tipos de cookies que usamos</h6>
+        <p><strong>Cookies técnicas:</strong> necesarias para el funcionamiento básico de la página.</p>
+        <p><strong>Cookies analíticas:</strong> nos permiten analizar el uso de la página para mejorarla.</p>
+        <h6><strong>¿Cómo desactivarlas?</strong></h6>
+        <p>Puedes desactivar las cookies desde la configuración de tu navegador. Ten en cuenta que esto puede afectar al funcionamiento de la página.</p>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="modal fade" id="modalPago" tabindex="-1" aria-labelledby="modalPagoLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h4 class="modal-title" id="modalPagoLabel">Datos de pago</h4>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Cerrar"></button>
+      </div>
+      <div class="modal-body">
+        <div class="row">
+          <div class="col-12 mb-3">
+            <label class="form-label">Número de tarjeta</label>
+            <input type="text" class="form-control" id="numTarjeta" placeholder="1234 5678 9012 3456" maxlength="19">
+          </div>
+          <div class="col-12 mb-3">
+            <label class="form-label">Nombre en la tarjeta</label>
+            <input type="text" class="form-control" placeholder="Como aparece en la tarjeta">
+          </div>
+          <div class="col-6 mb-3">
+            <label class="form-label">Fecha de caducidad</label>
+            <input type="text" class="form-control" placeholder="MM/AA" maxlength="5">
+          </div>
+          <div class="col-6 mb-3">
+            <label class="form-label">CVV</label>
+            <input type="text" class="form-control" placeholder="123" maxlength="3">
+          </div>
+        </div>
+        <div id="mensajePago" class="alert alert-success d-none">
+          ✅ Suscripción confirmada. ¡Bienvenido a Loan4Wheels!
+        </div>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancelar</button>
+        <button type="button" class="btn btn-primary" onclick="confirmarPago()">Confirmar suscripción</button>
+      </div>
+    </div>
+  </div>
+</div>
+  </body>
+</html>
