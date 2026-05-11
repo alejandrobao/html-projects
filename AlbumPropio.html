@@ -1,0 +1,623 @@
+<!doctype html>
+<html lang="es" data-bs-theme="dark">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="description" content="Página sencilla sobre mis álbumes favoritos que tengo en CD" />
+    <meta
+      name="author"
+      content="Alejandro Bao Rodríguez"
+    />
+    <title>Alejandro's CDs Collection</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital@1&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" rel="stylesheet">
+    <meta name="theme-color" content="#712cf9" />
+    <style>
+      .navbar-brand, h1, h2 {
+    font-family: 'Playfair Display', serif;
+    } 
+    h1, h2, .navbar-brand {
+    color: #D4AF37;
+    }
+    .btn-outline-secondary {
+    color: #D4AF37;
+    border-color: #D4AF37;
+    }
+
+    .btn-outline-secondary:hover {
+    background-color: #D4AF37;
+    color: #000;
+    }
+    .card-img-top {
+    height: 300px;
+    object-fit: contain;
+    }
+    .card-img-container {
+    position: relative;
+    height: 300px;
+    overflow: hidden;
+    }
+
+    .card-img-blur {
+    position: absolute;
+    inset: 0;
+    background-size: cover;
+    background-position: center;
+    filter: blur(10px);
+    transform: scale(1.1);
+    }
+
+    .card-img-top {
+    position: relative;
+    height: 300px;
+    object-fit: contain;
+    }
+
+    .genre-title {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    margin-bottom: 1.5rem;
+    margin-top: 4rem;
+    }
+
+    .genre-title::before,
+    .genre-title::after {
+    content: '';
+    flex: 1;
+    height: 1px;
+    background-color: #D4AF37;
+    }
+
+    #navbarHeader h4 {
+    color: #D4AF37;
+    font-family: 'Playfair Display', serif;
+    }
+
+    #navbarHeader a {
+    color: var(--bs-secondary-color) !important;
+    }
+
+    .navbar-toggler {
+    border-color: #D4AF37;
+    }
+
+    .navbar-toggler-icon {
+    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='%23D4AF37' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
+    }
+
+    .card {
+    border: 2px solid #D4AF37;
+    overflow: hidden;
+
+    }
+
+    .card-img-container {
+    border-radius: 4px 4px 0 0;
+    overflow: hidden;
+    }
+
+    footer a {
+    color: var(--bs-secondary-color) !important;
+    }
+
+    .album {
+    background-color: #1f1f1f !important;
+    }
+
+    body {
+    background-color: #242424;
+    }
+
+    .collapse.text-bg-dark {
+    background-color: #242424 !important;
+    }
+
+    .navbar.bg-dark {
+    background-color: #242424 !important;
+    }
+
+    .collapsing {
+    background-color: #242424 !important;
+    }
+
+    .card {
+    height: 100%;
+    }
+
+    .row > .col {
+    display: flex;
+    }
+
+    .card-body {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    }
+
+    .card-body .d-flex {
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+    </style>
+  </head>
+  <body>
+    <header data-bs-theme="dark" class="sticky-top">
+      <div class="collapse text-bg-dark" id="navbarHeader">
+        <div class="container">
+          <div class="row">
+            <div class="col-sm-8 col-md-7 py-4">
+              <h4>Sobre la página</h4>
+              <p class="text-body-secondary">
+                En esta página encontrarás una pequeña parte de mi colección
+                de CDs, pero no es un repertorio insignificante, ya que son
+                mis álbumes favoritos que tengo en físico.
+              </p>
+            </div>
+            <div class="col-sm-4 offset-md-1 py-4">
+              <h4>Más de esto en</h4>
+              <ul class="list-unstyled">
+                <li><a href="https://open.spotify.com/user/joxjayt9b3s6c96yc2uoye8ld?si=d4e026af8c96450b" class="text-white" target="_blank">Mi perfil de Spotify</a></li>
+                <li><a href="https://open.spotify.com/playlist/1Y1gJtHQQ1XyOJqAchYYdv?si=840f31aac44a4fa0&pt=05a90d8a28ef4bcf65f6e33804ec9818" class="text-white" target="_blank">Playlist de la página</a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="navbar navbar-dark bg-dark shadow-sm">
+        <div class="container">
+          <a href="AlbumPropio.html" class="navbar-brand d-flex align-items-center">
+            <i class="bi bi-disc"></i>
+            <strong><em>Alejandro's CD Collection</em></strong>
+          </a>
+          <button
+            class="navbar-toggler"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#navbarHeader"
+            aria-controls="navbarHeader"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+          >
+            <span class="navbar-toggler-icon"></span>
+          </button>
+        </div>
+      </div>
+    </header>
+    <main>
+      <section class="py-5 text-center container">
+        <div class="row py-lg-5">
+          <div class="col-lg-6 col-md-8 mx-auto">
+            <h1 class="fw-light">Colección personal de CDs</h1>
+            <p class="lead text-body-secondary"><em>
+              "Desde Metallica hasta Sinatra — una vida de música en CDs"
+            </em></p>
+          </div>
+        </div>
+      </section>
+      <div class="album py-5 bg-body-tertiary">
+        <div class="container">
+          <h2 class="genre-title mt-0"><i class="bi bi-lightning-charge-fill"></i> Rock</h2>
+          <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3">
+            <div class="col">
+              <div class="card shadow-sm">
+                <div class="card-img-container">
+                <div class="card-img-blur" style="background-image: url('https://cdn-images.dzcdn.net/images/cover/6d5f397660c6ec7a445f386edac05b9e/1900x1900-000000-81-0-0.jpg')"></div>
+                <img src="https://cdn-images.dzcdn.net/images/cover/6d5f397660c6ec7a445f386edac05b9e/1900x1900-000000-81-0-0.jpg" class="card-img-top">
+                </div>
+                  <div class="card-body">
+                  <p class="card-text">
+                    <strong>Ride the Lightning — Metallica (1984)</strong>
+                    <p><br>El segundo álbum de Metallica, considerado uno de los mejores discos de thrash metal de la historia. 
+                    <br>Fue el primero en mostrar la madurez compositiva de la banda.
+                    <br><i class="bi bi-music-note-beamed"></i> <strong>Canción favorita:</strong> <em>Creeping Death</em></p>
+                  </p>
+                  <div
+                    class="d-flex justify-content-between align-items-center"
+                  >
+                    <div class="btn-group">
+                      <a href="https://open.spotify.com/intl-es/album/05DePtm7oQMdL3Uzw2Jmsc?si=lnSlLoYgRt2W1z2lUPd-UQ" class="btn btn-sm btn-outline-secondary" target="_blank">Spotify</a>
+                      <a href="https://es.wikipedia.org/wiki/Ride_the_Lightning" class="btn btn-sm btn-outline-secondary" target="_blank">Wikipedia</a>
+                    </div>
+                    <small class="text-body-secondary">Duración: 47 mins</small>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col">
+              <div class="card shadow-sm">
+                <div class="card-img-container">
+                <div class="card-img-blur" style="background-image: url('https://m.media-amazon.com/images/I/411pMy47xvS._UF1000,1000_QL80_.jpg')"></div>
+                <img src="https://m.media-amazon.com/images/I/411pMy47xvS._UF1000,1000_QL80_.jpg" class="card-img-top">
+                </div>
+                  <div class="card-body">
+                  <p class="card-text">
+                    <strong>The Black Album — Metallica (1991)</strong>
+                    <p><br>El álbum más vendido de Metallica y uno de los más vendidos de la historia. 
+                    <br>Fue el primero en apostar por un sonido más lento y accesible, alejándose del thrash metal puro.
+                    <br><i class="bi bi-music-note-beamed"></i> <strong>Canción favorita:</strong> <em>Wherever I May Roam</em></p></p>
+                  </p>
+                  <div
+                    class="d-flex justify-content-between align-items-center"
+                  >
+                    <div class="btn-group">
+                      <a href="https://open.spotify.com/intl-es/album/3dck2tBxGfxj9m3CguDgjb?si=EEHfW3TpT66IHh0g058rpw" class="btn btn-sm btn-outline-secondary" target="_blank">Spotify</a>
+                      <a href="https://es.wikipedia.org/wiki/Metallica_(%C3%A1lbum)" class="btn btn-sm btn-outline-secondary" target="_blank">Wikipedia</a>
+                    </div>
+                    <small class="text-body-secondary">Duración: 62 mins</small>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col">
+              <div class="card shadow-sm">
+                <div class="card-img-container">
+                <div class="card-img-blur" style="background-image: url('https://cdn-images.dzcdn.net/images/cover/1d88b7de206eab4781f878d320ecf8a8/0x1900-000000-80-0-0.jpg')"></div>
+                <img src="https://cdn-images.dzcdn.net/images/cover/1d88b7de206eab4781f878d320ecf8a8/0x1900-000000-80-0-0.jpg" class="card-img-top">
+                </div>
+                  <div class="card-body">
+                  <p class="card-text">
+                    <strong>The Works — Queen (1984)</strong>
+                    <p><br>Contiene algunos de los mayores éxitos de Queen como Radio Ga Ga y I Want to Break Free.
+                    <br>Fue el primer álbum de la banda en incorporar sintetizadores de forma prominente.
+                    <br><i class="bi bi-music-note-beamed"></i> <strong>Canción favorita:</strong> <em>It's a Hard Life</em></p></p>
+                  </p>
+                  <div
+                    class="d-flex justify-content-between align-items-center"
+                  >
+                    <div class="btn-group">
+                      <a href="https://open.spotify.com/intl-es/album/5RS9xkMuDmeVISqGDBmnSa?si=0UXP52NXQYakds-AerFQYw" class="btn btn-sm btn-outline-secondary" target="_blank">Spotify</a>
+                      <a href="https://es.wikipedia.org/wiki/The_Works_(%C3%A1lbum)" class="btn btn-sm btn-outline-secondary" target="_blank">Wikipedia</a>
+                    </div>
+                    <small class="text-body-secondary">Duración: 39 mins</small>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col">
+              <div class="card shadow-sm">
+                <div class="card-img-container">
+                <div class="card-img-blur" style="background-image: url('https://i.scdn.co/image/ab67616d0000b2731351b9b5479c81f76ce7d419')"></div>
+                <img src="https://i.scdn.co/image/ab67616d0000b2731351b9b5479c81f76ce7d419" class="card-img-top">
+                </div>
+                  <div class="card-body">
+                  <p class="card-text">
+                    <strong>A Kind of Magic — Queen (1986)</strong>
+                    <p><br>Banda sonora inspirada en la película Highlander.
+                    <br>El tema principal fue el último gran éxito de Queen antes de la enfermedad de Freddie Mercury.
+                    <br><i class="bi bi-music-note-beamed"></i> <strong>Canción favorita:</strong> <em>A Kind of Magic </em></p></p>
+                  </p>
+                  <div
+                    class="d-flex justify-content-between align-items-center"
+                  >
+                    <div class="btn-group">
+                      <a href="https://open.spotify.com/intl-es/album/0pEfDPZko6TnNOgrZMe5nn?si=py50JBg8TRiY10-FWiCpMQ" class="btn btn-sm btn-outline-secondary" target="_blank">Spotify</a>
+                      <a href="https://es.wikipedia.org/wiki/A_Kind_of_Magic" class="btn btn-sm btn-outline-secondary" target="_blank">Wikipedia</a>
+                    </div>
+                    <small class="text-body-secondary">Duración: 38 mins</small>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col">
+              <div class="card shadow-sm">
+                <div class="card-img-container">
+                <div class="card-img-blur" style="background-image: url('https://cdn-images.dzcdn.net/images/cover/f0282817b697279e56df13909962a54a/0x1900-000000-80-0-0.jpg')"></div>
+                <img src="https://cdn-images.dzcdn.net/images/cover/f0282817b697279e56df13909962a54a/0x1900-000000-80-0-0.jpg" class="card-img-top">
+                </div>
+                  <div class="card-body">
+                  <p class="card-text">
+                    <strong>Nevermind — Nirvana (1991)</strong>
+                    <p><br>El álbum que llevó el grunge al mainstream mundial.
+                    <br>El bebé nadando de la portada es una de las imágenes más icónicas de la historia de la música.
+                    <br><i class="bi bi-music-note-beamed"></i> <strong>Canción favorita:</strong> <em>Drain You</em></p></p>
+                  </p>
+                  <div
+                    class="d-flex justify-content-between align-items-center"
+                  >
+                    <div class="btn-group">
+                      <a href="https://open.spotify.com/intl-es/album/2UJcKiJxNryhL050F5Z1Fk?si=kr0Z0IwnRe26RO7nEsNJIA" class="btn btn-sm btn-outline-secondary" target="_blank">Spotify</a>
+                      <a href="https://es.wikipedia.org/wiki/Nevermind" class="btn btn-sm btn-outline-secondary" target="_blank">Wikipedia</a>
+                    </div>
+                    <small class="text-body-secondary">Duración: 49 mins</small>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col">
+              <div class="card shadow-sm">
+                <div class="card-img-container">
+                <div class="card-img-blur" style="background-image: url('https://cdn-images.dzcdn.net/images/cover/00ee8c40862fb4e258fcbeaa17d7199e/1900x1900-000000-80-0-0.jpg')"></div>
+                <img src="https://cdn-images.dzcdn.net/images/cover/00ee8c40862fb4e258fcbeaa17d7199e/1900x1900-000000-80-0-0.jpg" class="card-img-top">
+                </div>
+                  <div class="card-body">
+                  <p class="card-text">
+                    <strong>Ten — Pearl Jam (1991)</strong>
+                    <p><br>Debut fulminante de Pearl Jam, grabado con un presupuesto muy ajustado.
+                    <br>Contiene clásicos como Alive y Even Flow, y tardó casi dos años en alcanzar el éxito masivo.
+                    <br><i class="bi bi-music-note-beamed"></i> <strong>Canción favorita:</strong> <em>Black</em></p></p>
+                  </p>
+                  <div
+                    class="d-flex justify-content-between align-items-center"
+                  >
+                    <div class="btn-group">
+                      <a href="https://open.spotify.com/intl-es/album/5B4PYA7wNN4WdEXdIJu58a?si=0gdbXn7bQ8-mQv-lGD4ArQ" class="btn btn-sm btn-outline-secondary" target="_blank">Spotify</a>
+                      <a href="https://es.wikipedia.org/wiki/Ten" class="btn btn-sm btn-outline-secondary" target="_blank">Wikipedia</a>
+                    </div>
+                    <small class="text-body-secondary">Duración: 53 mins</small>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <h2 class="genre-title"><i class="bi bi-disc-fill"></i> Pop</h2>
+          <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3">
+            <div class="col">
+              <div class="card shadow-sm">
+                <div class="card-img-container">
+                <div class="card-img-blur" style="background-image: url('https://storage.highresaudio.com/library/bild/c_340000/341343/field4.jpg')"></div>
+                <img src="https://storage.highresaudio.com/library/bild/c_340000/341343/field4.jpg" class="card-img-top">
+                </div>
+                  <div class="card-body">
+                  <p class="card-text">
+                    <strong>Thriller — Michael Jackson (1982)</strong>
+                    <p><br>El álbum más vendido de la historia con más de 70 millones de copias.
+                    <br>El videoclip de Thriller revolucionó el formato y dura casi 14 minutos.
+                    <br><i class="bi bi-music-note-beamed"></i> <strong>Canción favorita:</strong> <em>Human Nature</em></p></p>
+                  </p>
+                  <div
+                    class="d-flex justify-content-between align-items-center"
+                  >
+                    <div class="btn-group">
+                      <a href="https://open.spotify.com/intl-es/album/2ANVost0y2y52ema1E9xAZ?si=qP5iwzWETlmMI0V3fjVfIQ" class="btn btn-sm btn-outline-secondary" target="_blank">Spotify</a>
+                      <a href="https://es.wikipedia.org/wiki/Thriller_(%C3%A1lbum)" class="btn btn-sm btn-outline-secondary" target="_blank">Wikipedia</a>
+                    </div>
+                    <small class="text-body-secondary">Duración: 42 mins</small>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col">
+              <div class="card shadow-sm">
+                <div class="card-img-container">
+                <div class="card-img-blur" style="background-image: url('https://www.artofdesignonline.com/uploads/1/1/7/1/117189571/03-bad_orig.jpg')"></div>
+                <img src="https://www.artofdesignonline.com/uploads/1/1/7/1/117189571/03-bad_orig.jpg" class="card-img-top">
+                </div>
+                  <div class="card-body">
+                  <p class="card-text">
+                    <strong>Bad — Michael Jackson (1987)</strong>
+                    <p><br>Fue el primer álbum en producir cinco sencillos número uno consecutivos en Estados Unidos. 
+                    <br>MJ tardó tres años en grabarlo tras el éxito de Thriller.
+                    <br><i class="bi bi-music-note-beamed"></i> <strong>Canción favorita:</strong> <em>Another Part of Me</em></p></p>
+                  </p>
+                  <div
+                    class="d-flex justify-content-between align-items-center"
+                  >
+                    <div class="btn-group">
+                      <a href="https://open.spotify.com/intl-es/album/3Us57CjssWnHjTUIXBuIeH?si=5kzrIq6kTYKBToBfS0ILDA" class="btn btn-sm btn-outline-secondary" target="_blank">Spotify</a>
+                      <a href="https://es.wikipedia.org/wiki/Bad_(%C3%A1lbum)" class="btn btn-sm btn-outline-secondary" target="_blank">Wikipedia</a>
+                    </div>
+                    <small class="text-body-secondary">Duración: 48 mins</small>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col">
+              <div class="card shadow-sm">
+                <div class="card-img-container">
+                <div class="card-img-blur" style="background-image: url('https://www.udiscovermusic.com/wp-content/uploads/2019/06/Imagine-Dragons-Evolve-album-cover-820.jpg')"></div>
+                <img src="https://www.udiscovermusic.com/wp-content/uploads/2019/06/Imagine-Dragons-Evolve-album-cover-820.jpg" class="card-img-top">
+                </div>
+                  <div class="card-body">
+                  <p class="card-text">
+                    <strong>Imagine Dragons — Evolve (2017)</strong>
+                    <p><br>Contiene Believer y Thunder, dos de los temas más escuchados de la banda. 
+                    <br>Debutó en el número uno en varios países simultáneamente.
+                    <br><i class="bi bi-music-note-beamed"></i> <strong>Canción favorita:</strong> <em>Believer</em></p></p>
+                  </p>
+                  <div
+                    class="d-flex justify-content-between align-items-center"
+                  >
+                    <div class="btn-group">
+                      <a href="https://open.spotify.com/intl-es/album/33pt9HBdGlAbRGBHQgsZsU?si=n7Rpovv1TPySb84ZnlNl4w" class="btn btn-sm btn-outline-secondary" target="_blank">Spotify</a>
+                      <a href="https://es.wikipedia.org/wiki/Evolve_(%C3%A1lbum_de_Imagine_Dragons)" class="btn btn-sm btn-outline-secondary" target="_blank">Wikipedia</a>
+                    </div>
+                    <small class="text-body-secondary">Duración: 38 mins</small>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col">
+              <div class="card shadow-sm">
+                <div class="card-img-container">
+                <div class="card-img-blur" style="background-image: url('https://preview.redd.it/origins-hd-album-cover-v0-8atdz8vki3q11.png?width=1080&crop=smart&auto=webp&s=8528dfa1f4f19230f563aa6d4402b0d156c7b259')"></div>
+                <img src="https://preview.redd.it/origins-hd-album-cover-v0-8atdz8vki3q11.png?width=1080&crop=smart&auto=webp&s=8528dfa1f4f19230f563aa6d4402b0d156c7b259" class="card-img-top">
+                </div>
+                  <div class="card-body">
+                  <p class="card-text">
+                    <strong>Imagine Dragons — Origins (2018)</strong>
+                    <p><br>La secuela espiritual de Evolve, grabada casi simultáneamente.
+                    <br>Contiene Natural, uno de los temas más usados en trailers y competiciones deportivas de todo el mundo.
+                    <br><i class="bi bi-music-note-beamed"></i> <strong>Canción favorita:</strong> <em>Natural</em></p></p>
+                  </p>
+                  <div
+                    class="d-flex justify-content-between align-items-center"
+                  >
+                    <div class="btn-group">
+                      <a href="https://open.spotify.com/intl-es/album/3JfSxDfmwS5OeHPwLSkrfr?si=IPJBAIUnSpmP5IqGLt8XRg" class="btn btn-sm btn-outline-secondary" target="_blank">Spotify</a>
+                      <a href="https://es.wikipedia.org/wiki/Origins_(%C3%A1lbum_de_Imagine_Dragons)" class="btn btn-sm btn-outline-secondary" target="_blank">Wikipedia</a>
+                    </div>
+                    <small class="text-body-secondary">Duración: 51 mins</small>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col">
+              <div class="card shadow-sm">
+                <div class="card-img-container">
+                <div class="card-img-blur" style="background-image: url('https://payload.cargocollective.com/1/4/158872/9666476/Tame-Impala-Currents-final-packshot-1200px_1000.jpg')"></div>
+                <img src="https://payload.cargocollective.com/1/4/158872/9666476/Tame-Impala-Currents-final-packshot-1200px_1000.jpg" class="card-img-top">
+                </div>
+                  <div class="card-body">
+                  <p class="card-text">
+                    <strong>Currents — Tame Impala (2015)</strong>
+                    <p><br>Un giro radical hacia el pop psicodélico y electrónico.
+                    <br>Kevin Parker grabó, produjo y mezcló casi todo el álbum él solo en su estudio casero.<br>Marcó un antes y un después en el pop psicodélico.
+                    <br><i class="bi bi-music-note-beamed"></i> <strong>Canción favorita:</strong> <em>Let It Happen</em></p></p></p>
+                  </p>
+                  <div
+                    class="d-flex justify-content-between align-items-center"
+                  >
+                    <div class="btn-group">
+                      <a href="https://open.spotify.com/intl-es/album/79dL7FLiJFOO0EoehUHQBv?si=iyM1ugWDT-GNtsct0pq-rg" class="btn btn-sm btn-outline-secondary" target="_blank">Spotify</a>
+                      <a href="https://es.wikipedia.org/wiki/Currents" class="btn btn-sm btn-outline-secondary" target="_blank">Wikipedia</a>
+                    </div>
+                    <small class="text-body-secondary">Duración: 51 mins</small>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col">
+              <div class="card shadow-sm">
+                <div class="card-img-container">
+                <div class="card-img-blur" style="background-image: url('https://cdn-images.dzcdn.net/images/cover/23b006b2e956536d97612847bbd7a3b7/0x1900-000000-80-0-0.jpg')"></div>
+                <img src="https://cdn-images.dzcdn.net/images/cover/23b006b2e956536d97612847bbd7a3b7/0x1900-000000-80-0-0.jpg" class="card-img-top">
+                </div>
+                  <div class="card-body">
+                  <p class="card-text">
+                    <strong>Deadbeat — Tame Impala (2025)</strong>
+                    <p><br>Un giro radical hacia la música electrónica y el house inspirado en la escena rave de Australia Occidental.
+                    <br>Fue el primer lanzamiento de Kevin Parker bajo el sello Columbia Records.
+                    <br><i class="bi bi-music-note-beamed"></i> <strong>Canción favorita:</strong> <em>Dracula</em></p></p>
+                  </p>
+                  <div
+                    class="d-flex justify-content-between align-items-center"
+                  >
+                    <div class="btn-group">
+                      <a href="https://open.spotify.com/intl-es/album/5WulAOx9ilWy1h8UGZ1gkI?si=k31M5ZxiTf2pwHFbhXIVsA" class="btn btn-sm btn-outline-secondary" target="_blank">Spotify</a>
+                      <a href="https://en.wikipedia.org/wiki/Deadbeat_(album)" class="btn btn-sm btn-outline-secondary" target="_blank">Wikipedia</a>
+                    </div>
+                    <small class="text-body-secondary">Duración: 56 mins</small>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <h2 class="genre-title">Jazz & Soul</h2>
+          <div class="row row-cols-1 row-cols-sm-2 row-cols-md-4 g-3">
+            <div class="col">
+              <div class="card shadow-sm">
+                <div class="card-img-container">
+              <div class="card-img-blur" style="background-image: url('https://cdn-images.dzcdn.net/images/cover/336e00b554c028d58b7c432c38581997/1900x1900-000000-80-0-0.jpg')"></div>
+              <img src="https://cdn-images.dzcdn.net/images/cover/336e00b554c028d58b7c432c38581997/1900x1900-000000-80-0-0.jpg" class="card-img-top">
+              </div>
+                  <div class="card-body">
+                  <p class="card-text">
+                    <strong>The Best of Sade — Sade (1994)</strong>
+                    <p><br>Recopilación de los mejores temas de Sade, una de las voces más reconocibles del soul y jazz contemporáneo. 
+                    <br>Smooth Operator es considerada una de las canciones más elegantes jamás grabadas.
+                    <br><i class="bi bi-music-note-beamed"></i> <strong>Canción favorita:</strong> <em>Like a Tatoo</em></p></p>
+                  </p>
+                  <div
+                    class="d-flex justify-content-between align-items-center"
+                  >
+                    <div class="btn-group">
+                      <a href="https://open.spotify.com/intl-es/album/3uSWaQxJAdm5MWKQkQJNoK?si=AMlrJTU2Rcaes3kRQjasug" class="btn btn-sm btn-outline-secondary" target="_blank">Spotify</a>
+                      <a href="https://es.wikipedia.org/wiki/The_Best_of_Sade" class="btn btn-sm btn-outline-secondary" target="_blank">Wikipedia</a>
+                    </div>
+                    <small class="text-body-secondary">Duración: 74 mins</small>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col">
+              <div class="card shadow-sm">
+                <div class="card-img-container">
+                <div class="card-img-blur" style="background-image: url('https://f4.bcbits.com/img/a0332480388_10.jpg')"></div>
+                <img src="https://f4.bcbits.com/img/a0332480388_10.jpg" class="card-img-top">
+                </div>
+                  <div class="card-body">
+                  <p class="card-text">
+                    <strong>What You Won't Do for Love — Bobby Caldwell (1979)</strong>
+                    <p><br>Curiosamente, muchos pensaban que Bobby Caldwell era un artista negro por su voz. 
+                    <br>La discográfica ocultó su imagen durante meses para no perder al público afroamericano.
+                    <br><i class="bi bi-music-note-beamed"></i> <strong>Canción favorita:</strong> <em>What You Won't Do For Love</em></p></p>
+                  </p>
+                  <div
+                    class="d-flex justify-content-between align-items-center"
+                  >
+                    <div class="btn-group">
+                      <a href="https://open.spotify.com/intl-es/album/4pBJRxtR5TQe8hfsUgZ1r2?si=emKDB_86SQqrWDRxGBUdbA" class="btn btn-sm btn-outline-secondary" target="_blank">Spotify</a>
+                      <a href="https://en.wikipedia.org/wiki/Bobby_Caldwell_(album)" class="btn btn-sm btn-outline-secondary" target="_blank">Wikipedia</a>
+                    </div>
+                    <small class="text-body-secondary">Duración: 36 mins</small>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col">
+              <div class="card shadow-sm">
+                <div class="card-img-container">
+                <div class="card-img-blur" style="background-image: url('https://cdn-p.smehost.net/sites/c5d2b1a28fd246bfafed3b8dbafc1352/wp-content/uploads/1959/04/10-KINDOFBLUE.jpg')"></div>
+                <img src="https://cdn-p.smehost.net/sites/c5d2b1a28fd246bfafed3b8dbafc1352/wp-content/uploads/1959/04/10-KINDOFBLUE.jpg" class="card-img-top">
+                </div>
+                  <div class="card-body">
+                  <p class="card-text">
+                    <strong>Kind of Blue — Miles Davis (1959)</strong>
+                    <p><br>El álbum de jazz más vendido de todos los tiempos.
+                    <br>Fue grabado casi completamente a la primera toma, sin ensayos previos, lo que le da una espontaneidad única.
+                    <br><i class="bi bi-music-note-beamed"></i> <strong>Canción favorita:</strong> <em>Blue in Green</em></p></p>
+                  </p>
+                  <div
+                    class="d-flex justify-content-between align-items-center"
+                  >
+                    <div class="btn-group">
+                      <a href="https://open.spotify.com/intl-es/album/1weenld61qoidwYuZ1GESA?si=zvXQuS8nQZeBk4SEQgH-ow" class="btn btn-sm btn-outline-secondary" target="_blank">Spotify</a>
+                      <a href="https://es.wikipedia.org/wiki/Kind_of_Blue" class="btn btn-sm btn-outline-secondary" target="_blank">Wikipedia</a>
+                    </div>
+                    <small class="text-body-secondary">Duración: 45 mins</small>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col">
+              <div class="card shadow-sm">
+                <div class="card-img-container">
+                <div class="card-img-blur" style="background-image: url('https://propermusic.com/cdn/shop/files/8436569196144_7B02_7D_d07316ca-78b8-440e-8a09-371b9e337df4.jpg?v=1759423997&width=1200')"></div>
+                <img src="https://propermusic.com/cdn/shop/files/8436569196144_7B02_7D_d07316ca-78b8-440e-8a09-371b9e337df4.jpg?v=1759423997&width=1200" class="card-img-top">
+                </div>
+                  <div class="card-body">
+                  <p class="card-text">
+                    <strong>The Hits — Frank Sinatra (2018)</strong>
+                    <p><br>Una selección de los grandes clásicos de Sinatra, conocido como "La Voz".
+                    <br>My Way, grabada en 1969, fue casi rechazada por él antes de convertirse en su canción más emblemática.
+                    <br><i class="bi bi-music-note-beamed"></i> <strong>Canción favorita:</strong> <em>Nice 'n' Easy</em></p></p>
+                  </p>
+                  <div
+                    class="d-flex justify-content-between align-items-center"
+                  >
+                    <div class="btn-group">
+                      <a href="https://open.spotify.com/playlist/0Qi06MQJCyuTMOFIStlWCn?si=d4bbdfc8e4d441de" class="btn btn-sm btn-outline-secondary" target="_blank">Spotify</a>
+                      <a href="https://en.wikipedia.org/wiki/Frank_Sinatra%27s_Greatest_Hits!" class="btn btn-sm btn-outline-secondary" target="_blank">Wikipedia</a>
+                    </div>
+                    <small class="text-body-secondary">Duración: 50 mins</small>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </main>
+    <footer class="text-body-secondary py-5">
+    <div class="container d-flex flex-column flex-sm-row justify-content-between align-items-center gap-2">
+        <p class="mb-0"><em>No hay streaming que supere tener el CD en la mano — Alejandro Bao &copy; 2026</em></p>
+        <p class="mb-0"><a href="#">Volver al principio</a></p>
+    </div>
+    </footer>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  </body>
+</html>
