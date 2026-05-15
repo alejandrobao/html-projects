@@ -7,3 +7,6 @@ A simple HTML, CSS and BootStrap page displaying a personal music CD collection 
 
 ### Loan4Wheels
 A simple HTML, CSS and BootStrap page displaying a subscription page about car renting in pricing page format.
+
+### Esencia Noir
+A simple HTML, CSS and Bootstrap page displaying a men's fragrance store in carousel page format.
