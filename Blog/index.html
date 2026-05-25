@@ -1,0 +1,438 @@
+<!doctype html>
+<html lang="es" data-bs-theme="light">
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <meta name="description" content="" />
+        <meta name="author" content="Alejandro Bao" />
+        <title>Bass by Alex</title>
+        <meta name="theme-color" content="#712cf9" />
+        <link
+            href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+            rel="stylesheet"
+        />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;0,900;1,700&family=Lora:ital,wght@0,400;0,600;1,400&display=swap"
+            rel="stylesheet"
+        />
+        <link href="blog.css" rel="stylesheet" />
+    </head>
+    <body>
+        <svg xmlns="http://www.w3.org/2000/svg" class="d-none">
+            <symbol
+                id="aperture"
+                fill="none"
+                stroke="currentColor"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                viewBox="0 0 24 24"
+            >
+                <circle cx="12" cy="12" r="10"></circle>
+                <path
+                    d="M14.31 8l5.74 9.94M9.69 8h11.48M7.38 12l5.74-9.94M9.69 16L3.95 6.06M14.31 16H2.83m13.79-4l-5.74 9.94"
+                ></path>
+            </symbol>
+            <symbol id="cart" viewBox="0 0 16 16">
+                <path
+                    d="M0 1.5A.5.5 0 0 1 .5 1H2a.5.5 0 0 1 .485.379L2.89 3H14.5a.5.5 0 0 1 .49.598l-1 5a.5.5 0 0 1-.465.401l-9.397.472L4.415 11H13a.5.5 0 0 1 0 1H4a.5.5 0 0 1-.491-.408L2.01 3.607 1.61 2H.5a.5.5 0 0 1-.5-.5zM3.102 4l.84 4.479 9.144-.459L13.89 4H3.102zM5 12a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm7 0a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm-7 1a1 1 0 1 1 0 2 1 1 0 0 1 0-2zm7 0a1 1 0 1 1 0 2 1 1 0 0 1 0-2z"
+                ></path>
+            </symbol>
+            <symbol id="chevron-right" viewBox="0 0 16 16">
+                <path
+                    fill-rule="evenodd"
+                    d="M4.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L10.293 8 4.646 2.354a.5.5 0 0 1 0-.708z"
+                ></path>
+            </symbol>
+        </svg>
+        <div class="container">
+            <header class="border-bottom lh-1 py-3">
+                <div
+                    class="row flex-nowrap justify-content-between align-items-center"
+                >
+                    <div class="col-4 pt-1">
+                        <button class="btn btn-sm btn-outline-secondary" id="btnSuscribirse" onclick="suscribirse()">Suscríbete</button>
+                        <span id="msgSuscrito" style="display:none; color: var(--brown);">✓ ¡Suscrito!</span>
+                    </div>
+                    <div class="col-4 text-center">
+                        <a
+                            class="blog-header-logo text-body-emphasis text-decoration-none"
+                            href="index.html"
+                            >Bass by Alex</a
+                        >
+                    </div>
+                    <div
+                        class="col-4 d-flex justify-content-end align-items-center"
+                    ></div>
+                </div>
+            </header>
+            <div class="nav-scroller py-1 mb-3">
+                <nav class="nav nav-underline justify-content-center flex-wrap">
+                    <a
+                        class="nav-item nav-link link-body-emphasis active"
+                        href="#"
+                        >Inicio</a
+                    >
+                    <a class="nav-item nav-link link-body-emphasis" href="#" data-bs-toggle="modal" data-bs-target="#modalSobreMi">Sobre mí</a>
+                    <a class="nav-item nav-link link-body-emphasis" href="#" data-bs-toggle="modal" data-bs-target="#modalEquipamiento">Equipamiento</a>
+                    <a class="nav-item nav-link link-body-emphasis" href="#" data-bs-toggle="modal" data-bs-target="#modalBandas">Bandas</a>
+                    <a class="nav-item nav-link link-body-emphasis" href="#" data-bs-toggle="modal" data-bs-target="#modalCovers">Covers</a>
+                    <a class="nav-item nav-link link-body-emphasis" href="#" data-bs-toggle="modal" data-bs-target="#modalConsejos">Consejos</a>
+                </nav>
+            </div>
+        </div>
+        <main class="container">
+            <div
+                class="p-4 p-md-5 mb-4 rounded text-body-emphasis bg-body-secondary"
+            >
+                <div class="col-lg-6 px-0">
+                    <h1 class="display-4 fst-italic">
+                        Bienvenido a Bass by Alex
+                    </h1>
+                    <p class="lead my-3">
+                        Aquí encontrarás mis experiencias con el instrumento,
+                        equipamiento que uso o me llama la atención, bandas que
+                        me inspiran y algún que otro consejo para los que estáis
+                        empezando.
+                    </p>
+                </div>
+            </div>
+            <div class="row mb-2">
+                <div class="col-md-6">
+                    <div
+                        class="row g-0 border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative"
+                    >
+                        <div class="col p-4 d-flex flex-column position-static">
+                            <strong
+                                class="d-inline-block mb-2 text-primary-emphasis"
+                                >Covers</strong
+                            >
+                            <h3 class="mb-0">
+                                Aprendiendo Baby Be Mine — Michael Jackson
+                            </h3>
+                            <div class="mb-1 text-body-secondary">
+                                Mayo 6, 2025
+                            </div>
+                            <p>
+                                Llevo un tiempo queriendo aprenderme este temazo
+                                de Michael Jackson. Esta semana me he puesto en
+                                serio. Te cuento cómo va el proceso.
+                            </p>
+                            <a href="#post-babybmine" class="icon-link gap-1 icon-link-hover stretched-link">
+                                Continuar leyendo
+                                <svg class="bi" aria-hidden="true">
+                                    <use xlink:href="#chevron-right"></use>
+                                </svg>
+                            </a>
+                        </div>
+                        <div class="col-auto d-none d-lg-block">
+                            <img
+                                src="img/mj.jpg"
+                                alt="Baby Be Mine"
+                                style="
+                                    width: 200px;
+                                    height: 300px;
+                                    object-fit: cover;
+                                    object-position: left top;
+                                "
+                            />
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div
+                        class="row g-0 border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative"
+                    >
+                        <div class="col p-4 d-flex flex-column position-static">
+                            <strong
+                                class="d-inline-block mb-2 text-primary-emphasis"
+                                >Consejos</strong
+                            >
+                            <h3 class="mb-0">De vuelta a la teoría musical</h3>
+                            <div class="mb-1 text-body-secondary">
+                                Mayo 14, 2025
+                            </div>
+                            <p>
+                                Tengo la teoría musical un poco abandonada y se
+                                me nota a la hora de improvisar. Me he propuesto
+                                retomarlo desde las escalas. Esto es lo que
+                                estoy haciendo.
+                            </p>
+                            <a href="#post-teoria" class="icon-link gap-1 icon-link-hover stretched-link">
+                                Continuar leyendo
+                                <svg class="bi" aria-hidden="true">
+                                    <use xlink:href="#chevron-right"></use>
+                                </svg>
+                            </a>
+                        </div>
+                        <div class="col-auto d-none d-lg-block">
+                            <img
+                                src="img/teoria.jpg"
+                                alt="Teoría musical"
+                                style="
+                                    width: 200px;
+                                    height: 300px;
+                                    object-fit: cover;
+                                "
+                            />
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row g-5">
+                <div class="col-md-8">
+                    <article class="blog-post" id="post-babybmine">
+                        <h2 class="display-5 link-body-emphasis mb-1">
+                            Aprendiendo Baby Be Mine — Michael Jackson
+                        </h2>
+                        <p class="blog-post-meta">
+                            Mayo 6, 2025 by <span style="color: var(--brown);">Alejandro</span>
+                        </p>
+                        <p>
+                            Esta semana me he puesto en serio con Baby Be Mine
+                            de Michael Jackson. Es un tema que tenía pendiente
+                            desde hace tiempo y por fin le estoy dedicando el
+                            rato que merece.
+                        </p>
+                        <h2>La línea de bajo</h2>
+                        <p>
+                            Lo primero que me llamó la atención es lo groovy que
+                            es la línea. No es complicada técnicamente, pero
+                            tiene un feel muy específico que cuesta pillar si no
+                            te metes de lleno en el ritmo. Estoy trabajando
+                            sobre todo el timing y el acento en las notas
+                            correctas.
+                        </p>
+                        <h2>El proceso</h2>
+                        <p>
+                            Mi forma de aprender covers es siempre la misma:
+                            primero escucho el tema varias veces solo fijándome
+                            en el bajo, luego busco la tablatura y la toco junto
+                            con la canción. Con este tema estoy en la fase de
+                            juntarlo todo.
+                        </p>
+                        <h2>Conclusión</h2>
+                        <p>
+                            Todavía me queda trabajo pero va bien. Si estás
+                            pensando en aprender este tema te lo recomiendo —
+                            aprenderás mucho sobre el groove y el bolsillo
+                            rítmico.
+                        </p>
+                    </article>
+                    <article class="blog-post" id="post-teoria">
+                        <h2 class="display-5 link-body-emphasis mb-1">
+                            De vuelta a la teoría musical
+                        </h2>
+                        <p class="blog-post-meta">
+                            Mayo 14, 2025 by <span style="color: var(--brown);">Alejandro</span>
+                        </p>
+                        <p>
+                            Llevo un tiempo notando que cuando improviso me
+                            muevo siempre por los mismos sitios. Siempre las
+                            mismas notas, los mismos patrones. Y la razón es
+                            clara: tengo la teoría musical bastante oxidada.
+                        </p>
+                        <h2>Por dónde empiezo</h2>
+                        <p>
+                            He decidido retomarlo desde las escalas — mayor,
+                            menor natural, menor pentatónica. Cosas básicas que
+                            sé pero que no tengo del todo interiorizadas en el
+                            mástil. La idea es no memorizar posiciones sino
+                            entender qué estoy tocando y por qué.
+                        </p>
+                        <h2>El objetivo</h2>
+                        <p>
+                            No quiero ser un teórico, quiero ser mejor músico.
+                            Si entiendo cómo funcionan los acordes y las escalas
+                            puedo componer mis propias líneas en vez de copiar
+                            siempre lo que escucho.
+                        </p>
+                        <h2>Conclusión</h2>
+                        <p>
+                            Es un proceso lento pero merece la pena. Si tú
+                            también tienes la teoría abandonada te animo a
+                            retomarlo — no hace falta estudiar mucho cada día,
+                            con 15 minutos es suficiente.
+                        </p>
+                    </article>
+                </div>
+                <div class="col-md-4">
+                    <div class="position-sticky" style="top: 2rem">
+                        <div class="p-4 mb-3 bg-body-tertiary rounded">
+                            <h4 class="fst-italic">Sobre el blog</h4>
+                            <p class="mb-0">
+                                Soy Alejandro, bajista de Vigo. Este blog es mi
+                                rincón para compartir todo lo que voy
+                                aprendiendo — covers, equipamiento, bandas y
+                                teoría.
+                            </p>
+                        </div>
+                        <div>
+                            <h4 class="fst-italic">Posts Recientes</h4>
+                            <ul class="list-unstyled">
+                                <li>
+                                    <a href="#post-babybmine" class="d-flex flex-column flex-lg-row gap-3 align-items-start align-items-lg-center py-3 link-body-emphasis text-decoration-none border-top">
+                                        <img src="img/mj.jpg" alt="Baby Be Mine" style="width: 96px; height: 96px; object-fit: cover; border-radius: 0.5rem;">
+                                            <rect
+                                                width="100%"
+                                                height="100%"
+                                                fill="#777"
+                                            ></rect>
+                                        </svg>
+                                        <div class="col-lg-8">
+                                            <h6 class="mb-0">
+                                                Aprendiendo Baby Be Mine —
+                                                Michael Jackson
+                                            </h6>
+                                            <small class="text-body-secondary"
+                                                >Mayo 6, 2025</small
+                                            >
+                                        </div>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#post-teoria" class="d-flex flex-column flex-lg-row gap-3 align-items-start align-items-lg-center py-3 link-body-emphasis text-decoration-none border-top">
+                                        <img src="img/teoria.jpg" alt="Teoría musical" style="width: 96px; height: 96px; object-fit: cover; border-radius: 0.5rem;">
+                                            <rect
+                                                width="100%"
+                                                height="100%"
+                                                fill="#777"
+                                            ></rect>
+                                        </svg>
+                                        <div class="col-lg-8">
+                                            <h6 class="mb-0">
+                                                De vuelta a la teoría musical
+                                            </h6>
+                                            <small class="text-body-secondary"
+                                                >Mayo 14, 2025</small
+                                            >
+                                        </div>
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                        <div>
+                            <h4 class="fst-italic">Sígueme</h4>
+                            <ol class="list-unstyled">
+                                <li>
+                                    <a
+                                        href="https://instagram.com/bass.byalex"
+                                        target="_blank"
+                                        >Instagram</a
+                                    >
+                                </li>
+                            </ol>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+        <footer class="py-5 text-center text-body-secondary bg-body-tertiary">
+            <p>Bass by Alex — Blog de bajo eléctrico.</p>
+            <button onclick="window.scrollTo({top: 0, behavior: 'smooth'})" class="btn btn-sm btn-outline-secondary">Volver arriba</button>
+        </footer>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+        <div class="modal fade" id="modalSobreMi" tabindex="-1" aria-labelledby="modalSobreMiLabel" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="modalSobreMiLabel">Sobre mí</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                        <p>Me llamo Alejandro, soy de Vigo y llevo un tiempo metido en el mundo del bajo eléctrico. Empecé casi por casualidad y acabó convirtiéndose en una de mis cosas favoritas.</p>
+                        <p>Actualmente estoy aprendiendo covers, trabajando mi teoría musical y explorando distintos estilos — desde el funk hasta el rock. Este blog es mi forma de documentar ese proceso y compartirlo con quien le pueda interesar.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="modal fade" id="modalEquipamiento" tabindex="-1" aria-labelledby="modalEquipamientoLabel" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="modalEquipamientoLabel">Equipamiento</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                        <h6>Bajos</h6>
+                        <p>Mi bajo principal es el Marcus Miller V3P-4 TS, un instrumento con un sonido increíble y muy versátil. Mi primer bajo fue un Ibanez GSR180-BK, con el que aprendí todo desde cero y al que le tengo mucho cariño.</p>
+                        <h6>Amplificador</h6>
+                        <p>Uso un Fender Rumble 100, potente y con un sonido limpio y cálido que encaja con casi cualquier estilo.</p>
+                        <h6>Interfaz de audio</h6>
+                        <p>Para grabar uso una Focusrite Scarlett Solo de 4ª generación. Sencilla, fiable y con una calidad de sonido más que suficiente para lo que necesito.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="modal fade" id="modalBandas" tabindex="-1" aria-labelledby="modalBandasLabel" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="modalBandasLabel">Bandas que me inspiran</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                        <h6>Queen</h6>
+                        <p>La banda que me hizo coger el bajo. John Deacon es uno de los bajistas más infravalorados de la historia — discreto, sólido y con líneas que son pura melodía. Si no fuera por Queen probablemente no estaría escribiendo esto.</p>
+                        <h6>Metallica</h6>
+                        <p>El bajo de Cliff Burton me voló la cabeza. Un sonido brutal y con personalidad propia dentro de una banda de metal.</p>
+                        <h6>Nirvana</h6>
+                        <p>Krist Novoselic no tiene el reconocimiento que merece. Líneas simples pero efectivas que encajan perfectamente con el sonido de la banda.</p>
+                        <h6>Vacations y Vansire</h6>
+                        <p>Dos bandas de dream pop/indie que escucho mucho últimamente. El bajo en este tipo de música tiene un rollo completamente distinto — más atmosférico y melódico.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="modal fade" id="modalCovers" tabindex="-1" aria-labelledby="modalCoversLabel" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="modalCoversLabel">Covers</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                        <p>Una lista de los covers que he trabajado o estoy trabajando. Cada uno me ha enseñado algo distinto sobre el instrumento.</p>
+                        <h6>Baby Be Mine — Michael Jackson</h6>
+                        <p>Mi cover actual. Una línea groovy que parece sencilla pero tiene mucho matiz en el ritmo y el feel.</p>
+                        <h6>Leave Me Alone — Michael Jackson</h6>
+                        <p>Otro temazo de MJ. El bajo tiene un papel muy rítmico y funcional que me ayudó a trabajar la precisión.</p>
+                        <h6>Shape of My Heart — Sting</h6>
+                        <p>Uno de mis favoritos. Una línea melódica preciosa que combina muy bien técnica y musicalidad.</p>
+                        <h6>Let It Happen — Tame Impala</h6>
+                        <p>Un cover más moderno y psicodélico. El bajo tiene un rollo muy particular dentro de la mezcla.</p>
+                        <h6>Zitti e Buoni — Måneskin</h6>
+                        <p>Energía pura. Una línea agresiva y directa que es muy divertida de tocar.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="modal fade" id="modalConsejos" tabindex="-1" aria-labelledby="modalConsejosLabel" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="modalConsejosLabel">Consejos</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                        <p>Cosas que ojalá me hubieran dicho cuando empecé.</p>
+                        <h6>"El bajo no se escucha"</h6>
+                        <p>El consejo más importante: ignora a quien te diga esto. El bajo es la columna vertebral de cualquier canción — cuando no está se nota, aunque la gente no sepa por qué. Sin bajo no hay groove, no hay cuerpo, no hay música.</p>
+                        <h6>Aprende canciones desde el primer día</h6>
+                        <p>Los ejercicios técnicos están bien pero aprender canciones que te gustan es lo que te mantiene motivado. Combina las dos cosas.</p>
+                        <h6>No hace falta un bajo caro para empezar</h6>
+                        <p>Un instrumento decente y ganas son suficientes. El tono está en los dedos, no en el precio.</p>
+                        <h6>La teoría musical es tu amiga</h6>
+                        <p>No hace falta estudiarla toda de golpe, pero entender lo básico te abre un mundo a la hora de improvisar y componer.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <script>
+            function suscribirse() {
+                document.getElementById('btnSuscribirse').style.display = 'none';
+                document.getElementById('msgSuscrito').style.display = 'inline';
+            }
+        </script>
+    </body>
+</html>
