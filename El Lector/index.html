@@ -1,0 +1,718 @@
+<!doctype html>
+<html lang="en" data-bs-theme="auto">
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <meta
+            name="description"
+            content="El Lector, tu club de lectura de confianza."
+        />
+        <meta name="author" content="Alejandro Bao" />
+        <meta name="generator" content="Astro v5.13.2" />
+        <title>El Lector · Club de Lectura</title>
+        <link
+            href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+            rel="stylesheet"
+        />
+        <link
+            rel="stylesheet"
+            href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css"
+        />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Lato:wght@300;400&display=swap"
+            rel="stylesheet"
+        />
+        <link rel="stylesheet" href="styles.css" />
+        <meta name="theme-color" content="#712cf9" />
+    </head>
+    <body>
+        <main>
+            <div class="container py-4">
+                <header class="pb-3 mb-4 border-bottom">
+                    <nav class="navbar navbar-expand-lg fixed-top">
+                        <div class="container">
+                            <a
+                                class="navbar-brand d-flex align-items-center"
+                                href="index.html"
+                            >
+                                <i class="bi bi-book-half me-2 fs-4"></i>
+                                <span class="fw-bold">El Lector</span>
+                            </a>
+                            <button
+                                class="navbar-toggler"
+                                type="button"
+                                data-bs-toggle="collapse"
+                                data-bs-target="#navbarNav"
+                            >
+                                <span class="navbar-toggler-icon"></span>
+                            </button>
+                            <div
+                                class="collapse navbar-collapse"
+                                id="navbarNav"
+                            >
+                                <ul class="navbar-nav ms-auto">
+                                    <li class="nav-item">
+                                        <a
+                                            class="nav-link"
+                                            href="#"
+                                            onclick="
+                                                window.scrollTo({
+                                                    top: 0,
+                                                    behavior: 'smooth',
+                                                })
+                                            "
+                                            >Inicio</a
+                                        >
+                                    </li>
+                                    <li class="nav-item">
+                                        <a
+                                            class="nav-link"
+                                            href="#"
+                                            data-bs-toggle="modal"
+                                            data-bs-target="#modalGeneros"
+                                            >Géneros</a
+                                        >
+                                    </li>
+                                    <li class="nav-item">
+                                        <a
+                                            class="nav-link"
+                                            href="#"
+                                            data-bs-toggle="modal"
+                                            data-bs-target="#modalAutores"
+                                            >Autores</a
+                                        >
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </nav>
+                </header>
+                <div class="p-5 mb-4 bg-body-tertiary rounded-3">
+                    <div class="container-fluid py-5">
+                        <h1 class="display-5 fw-bold">
+                            Bienvenido a El Lector
+                        </h1>
+                        <p class="col-md-8 fs-4">
+                            Un club de lectura para los que disfrutan de un buen
+                            libro, una taza de café y buena música. Únete a
+                            nuestra comunidad y descubre tu próxima lectura
+                            favorita.
+                        </p>
+                        <button
+                            class="btn btn-primary btn-lg"
+                            type="button"
+                            data-bs-toggle="modal"
+                            data-bs-target="#modalUnete"
+                        >
+                            Únete al club
+                        </button>
+                    </div>
+                </div>
+                <div class="row align-items-md-stretch">
+                    <div class="col-md-6">
+                        <div class="h-100 p-5 text-bg-dark rounded-3 border">
+                            <h2>Nuestras lecturas</h2>
+                            <p>
+                                Cada mes elegimos un libro entre todos los
+                                miembros del club. Novela, ensayo, poesía...
+                                todo tiene cabida en El Lector.
+                            </p>
+                            <button
+                                class="btn btn-outline-light"
+                                type="button"
+                                onclick="
+                                    document
+                                        .getElementById('lecturas')
+                                        .scrollIntoView({ behavior: 'smooth' })
+                                "
+                            >
+                                Ver lecturas
+                            </button>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div
+                            class="h-100 p-5 bg-body-tertiary border rounded-3"
+                        >
+                            <h2>Próximas reuniones</h2>
+                            <p>
+                                Nos reunimos el primer viernes de cada mes. Un
+                                café, buena compañía y muchas ganas de hablar de
+                                libros. ¿Te apuntas?
+                            </p>
+                            <button
+                                class="btn btn-outline-secondary"
+                                type="button"
+                                onclick="
+                                    document
+                                        .getElementById('calendario')
+                                        .scrollIntoView({ behavior: 'smooth' })
+                                "
+                            >
+                                Ver calendario
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                <hr class="my-5" />
+                <section id="lecturas" class="mt-5">
+                    <h2 class="text-center mb-5">Nuestras Lecturas</h2>
+
+                    <h4 class="mb-4">Lectura actual</h4>
+                    <div class="row mb-5">
+                        <div class="col-md-3">
+                            <img
+                                src="/img/coleccionista.jpg"
+                                class="img-fluid rounded libro-actual"
+                                alt="Portada"
+                            />
+                        </div>
+                        <div
+                            class="col-md-5 d-flex flex-column justify-content-center ps-4"
+                        >
+                            <span
+                                class="badge mb-3"
+                                style="
+                                    background-color: var(--color-acento);
+                                    color: var(--color-oscuro);
+                                    width: fit-content;
+                                "
+                                >Lectura del mes</span
+                            >
+                            <h3>El coleccionista</h3>
+                            <p class="mb-1">
+                                <strong>Autor:</strong> John Fowles
+                            </p>
+                            <p class="mb-1">
+                                <strong>Género:</strong> Thriller Psicológico
+                            </p>
+                            <p><strong>Páginas:</strong> 352</p>
+                        </div>
+                        <div
+                            class="col-md-4 d-flex align-items-center justify-content-center"
+                        >
+                            <blockquote class="cita-libro text-center">
+                                <p>
+                                    "Colecciono cosas porque me hacen sentir que
+                                    poseo algo que nadie más puede tener."
+                                </p>
+                                <footer>— John Fowles</footer>
+                            </blockquote>
+                        </div>
+                    </div>
+
+                    <h4 class="mb-4">Lecturas pasadas</h4>
+                    <div class="row g-4">
+                        <div class="col-md-4">
+                            <div class="card h-100">
+                                <div class="card-img-container">
+                                    <div
+                                        class="card-img-bg"
+                                        style="
+                                            background-image: url(&quot;img/noches.jpg&quot;);
+                                        "
+                                    ></div>
+                                    <img
+                                        src="img/noches.jpg"
+                                        class="card-img-front"
+                                        alt="El Coleccionista"
+                                    />
+                                </div>
+                                <div class="card-body">
+                                    <h5 class="card-title">Noches Blancas</h5>
+                                    <p class="card-text mb-1">
+                                        <strong>Autor:</strong> Fiodor
+                                        Dostoyevski
+                                    </p>
+                                    <p class="card-text mb-1">
+                                        <strong>Género:</strong> Ficción
+                                    </p>
+                                    <p class="card-text">
+                                        <strong>Páginas:</strong> 128
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="card h-100">
+                                <div class="card-img-container">
+                                    <div
+                                        class="card-img-bg"
+                                        style="
+                                            background-image: url(&quot;img/tunel.jpg&quot;);
+                                        "
+                                    ></div>
+                                    <img
+                                        src="img/tunel.jpg"
+                                        class="card-img-front"
+                                        alt="El Coleccionista"
+                                    />
+                                </div>
+                                <div class="card-body">
+                                    <h5 class="card-title">El túnel</h5>
+                                    <p class="card-text mb-1">
+                                        <strong>Autor:</strong> Ernesto Sabato
+                                    </p>
+                                    <p class="card-text mb-1">
+                                        <strong>Género:</strong> Psicológica
+                                    </p>
+                                    <p class="card-text">
+                                        <strong>Páginas:</strong> 160
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="card h-100">
+                                <div class="card-img-container">
+                                    <div
+                                        class="card-img-bg"
+                                        style="
+                                            background-image: url(&quot;img/sueño.jpg&quot;);
+                                        "
+                                    ></div>
+                                    <img
+                                        src="img/sueño.jpg"
+                                        class="card-img-front"
+                                        alt="El Coleccionista"
+                                    />
+                                </div>
+                                <div class="card-body">
+                                    <h5 class="card-title">El sueño eterno</h5>
+                                    <p class="card-text mb-1">
+                                        <strong>Autor:</strong> Raymond Chandler
+                                    </p>
+                                    <p class="card-text mb-1">
+                                        <strong>Género:</strong> Novela negra
+                                    </p>
+                                    <p class="card-text">
+                                        <strong>Páginas:</strong> 238
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                <hr class="my-5" />
+                <section id="calendario" class="mt-5">
+                    <h2 class="text-center mb-5">Calendario de Reuniones</h2>
+                    <div style="overflow-x: auto; direction: ltr">
+                        <table class="table text-center">
+                            <thead>
+                                <tr>
+                                    <th>Lunes</th>
+                                    <th>Martes</th>
+                                    <th>Miércoles</th>
+                                    <th>Jueves</th>
+                                    <th>Viernes</th>
+                                    <th>Sábado</th>
+                                    <th>Domingo</th>
+                                </tr>
+                            </thead>
+                            <tbody id="calendario-body"></tbody>
+                        </table>
+                    </div>
+                </section>
+                <footer class="pt-3 mt-4 text-body-secondary border-top">
+                    &copy; 2026 El Lector · Club de Lectura
+                </footer>
+            </div>
+            <div class="modal fade" id="modalUnete" tabindex="-1">
+                <div class="modal-dialog modal-dialog-centered">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title">Únete a El Lector</h5>
+                            <button
+                                type="button"
+                                class="btn-close"
+                                data-bs-dismiss="modal"
+                            ></button>
+                        </div>
+                        <div class="modal-body">
+                            <div class="mb-3">
+                                <label class="form-label">Nombre</label>
+                                <input
+                                    type="text"
+                                    class="form-control"
+                                    placeholder="Tu nombre"
+                                />
+                            </div>
+                            <div class="mb-3">
+                                <label class="form-label">Email</label>
+                                <input
+                                    type="email"
+                                    class="form-control"
+                                    placeholder="Tu email"
+                                />
+                            </div>
+                            <div class="mb-3">
+                                <label class="form-label"
+                                    >¿Cuál es tu género favorito?</label
+                                >
+                                <select class="form-select">
+                                    <option value="">
+                                        Selecciona un género
+                                    </option>
+                                    <option>Novela histórica</option>
+                                    <option>Fantasía</option>
+                                    <option>Terror</option>
+                                    <option>Ciencia ficción</option>
+                                    <option>Romance</option>
+                                    <option>Ensayo</option>
+                                    <option>Poesía</option>
+                                    <option>Otro</option>
+                                </select>
+                            </div>
+                            <div class="mb-3">
+                                <label class="form-label"
+                                    >¿Cómo nos conociste?</label
+                                >
+                                <select class="form-select">
+                                    <option value="">
+                                        Selecciona una opción
+                                    </option>
+                                    <option>Redes sociales</option>
+                                    <option>Un amigo o conocido</option>
+                                    <option>Búsqueda en internet</option>
+                                    <option>Cartelería / flyers</option>
+                                    <option>Otro</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div id="alerta-envio" class="alert mx-3 d-none">
+                            ¡Bienvenido a El Lector! En breve nos pondremos en
+                            contacto contigo.
+                        </div>
+                        <div class="modal-footer">
+                            <button
+                                type="button"
+                                class="btn btn-outline-secondary"
+                                data-bs-dismiss="modal"
+                            >
+                                Cancelar
+                            </button>
+                            <button
+                                type="button"
+                                class="btn btn-primary"
+                                onclick="
+                                    document
+                                        .getElementById('alerta-envio')
+                                        .classList.remove('d-none');
+                                    this.disabled = true;
+                                "
+                            >
+                                Enviar
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="modal fade" id="modalGeneros" tabindex="-1">
+                <div
+                    class="modal-dialog modal-lg modal-dialog-centered modal-dialog-scrollable"
+                >
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title">Géneros</h5>
+                            <button
+                                type="button"
+                                class="btn-close"
+                                data-bs-dismiss="modal"
+                            ></button>
+                        </div>
+                        <div class="modal-body">
+                            <div class="row g-4">
+                                <div class="col-md-4">
+                                    <div class="card h-100">
+                                        <img
+                                            src="/img/romance.jpg"
+                                            class="card-img-top"
+                                            alt="Romance"
+                                        />
+                                        <div class="card-body">
+                                            <h5 class="card-title">Romance</h5>
+                                            <p class="card-text">
+                                                Historias de amor y emociones
+                                                que exploran las relaciones
+                                                humanas en toda su complejidad.
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-4">
+                                    <div class="card h-100">
+                                        <img
+                                            src="/img/drama.jpg"
+                                            class="card-img-top"
+                                            alt="Drama"
+                                        />
+                                        <div class="card-body">
+                                            <h5 class="card-title">Drama</h5>
+                                            <p class="card-text">
+                                                Narrativas intensas centradas en
+                                                conflictos emocionales y
+                                                situaciones de vida profundas.
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-4">
+                                    <div class="card h-100">
+                                        <img
+                                            src="/img/negra.jpg"
+                                            class="card-img-top"
+                                            alt="Novela Negra"
+                                        />
+                                        <div class="card-body">
+                                            <h5 class="card-title">
+                                                Novela Negra
+                                            </h5>
+                                            <p class="card-text">
+                                                Crimen, misterio y personajes al
+                                                límite en atmósferas oscuras e
+                                                inquietantes.
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-4">
+                                    <div class="card h-100">
+                                        <img
+                                            src="/img/psicologica.jpg"
+                                            class="card-img-top"
+                                            alt="Psicológica"
+                                        />
+                                        <div class="card-body">
+                                            <h5 class="card-title">
+                                                Psicológica
+                                            </h5>
+                                            <p class="card-text">
+                                                Exploración de la mente humana,
+                                                sus obsesiones, miedos y
+                                                contradicciones más profundas.
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-4">
+                                    <div class="card h-100">
+                                        <img
+                                            src="/img/trhiller.jpg"
+                                            class="card-img-top"
+                                            alt="Thriller"
+                                        />
+                                        <div class="card-body">
+                                            <h5 class="card-title">Thriller</h5>
+                                            <p class="card-text">
+                                                Tensión y suspense que te
+                                                mantienen pegado a la página
+                                                hasta el último momento.
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-4">
+                                    <div class="card h-100">
+                                        <img
+                                            src="/img/filosofica.jpg"
+                                            class="card-img-top"
+                                            alt="Filosofía"
+                                        />
+                                        <div class="card-body">
+                                            <h5 class="card-title">
+                                                Filosofía
+                                            </h5>
+                                            <p class="card-text">
+                                                Reflexiones sobre la existencia,
+                                                la moral y el sentido de la vida
+                                                a través de la literatura.
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="modal fade" id="modalAutores" tabindex="-1">
+                <div
+                    class="modal-dialog modal-lg modal-dialog-centered modal-dialog-scrollable"
+                >
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title">Autores</h5>
+                            <button
+                                type="button"
+                                class="btn-close"
+                                data-bs-dismiss="modal"
+                            ></button>
+                        </div>
+                        <div class="modal-body">
+                            <div class="row g-4">
+                                <div class="col-md-4">
+                                    <div class="card h-100">
+                                        <img
+                                            src="/img/dosto.jpg"
+                                            class="card-img-top"
+                                            alt="Dostoyevski"
+                                        />
+                                        <div class="card-body">
+                                            <h5 class="card-title">
+                                                Fiódor Dostoyevski
+                                            </h5>
+                                            <p class="card-text">
+                                                Maestro de la psicología humana,
+                                                sus obras exploran el
+                                                sufrimiento, la culpa y la
+                                                redención.
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-4">
+                                    <div class="card h-100">
+                                        <img
+                                            src="/img/sabato.jpg"
+                                            class="card-img-top"
+                                            alt="Sabato"
+                                        />
+                                        <div class="card-body">
+                                            <h5 class="card-title">
+                                                Ernesto Sabato
+                                            </h5>
+                                            <p class="card-text">
+                                                Escritor argentino que fusiona
+                                                existencialismo y novela negra
+                                                con una intensidad única.
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-4">
+                                    <div class="card h-100">
+                                        <img
+                                            src="/img/raymond.jpg"
+                                            class="card-img-top"
+                                            alt="Chandler"
+                                        />
+                                        <div class="card-body">
+                                            <h5 class="card-title">
+                                                Raymond Chandler
+                                            </h5>
+                                            <p class="card-text">
+                                                Padre del noir americano,
+                                                creador de atmósferas oscuras y
+                                                diálogos afilados como
+                                                cuchillos.
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-4">
+                                    <div class="card h-100">
+                                        <img
+                                            src="/img/john.jpg"
+                                            class="card-img-top fowles-img"
+                                            alt="Fowles"
+                                        />
+                                        <div class="card-body">
+                                            <h5 class="card-title">
+                                                John Fowles
+                                            </h5>
+                                            <p class="card-text">
+                                                Explorador de las obsesiones
+                                                humanas y el poder, con una
+                                                narrativa perturbadora y
+                                                fascinante.
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-4">
+                                    <div class="card h-100">
+                                        <img
+                                            src="/img/stefan.jpg"
+                                            class="card-img-top"
+                                            alt="Zweig"
+                                        />
+                                        <div class="card-body">
+                                            <h5 class="card-title">
+                                                Stefan Zweig
+                                            </h5>
+                                            <p class="card-text">
+                                                Maestro del relato corto, capaz
+                                                de capturar emociones profundas
+                                                con una prosa elegante y
+                                                precisa.
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-4">
+                                    <div class="card h-100">
+                                        <img
+                                            src="/img/patricia.jpg"
+                                            class="card-img-top"
+                                            alt="Highsmith"
+                                        />
+                                        <div class="card-body">
+                                            <h5 class="card-title">
+                                                Patricia Highsmith
+                                            </h5>
+                                            <p class="card-text">
+                                                Reina del thriller psicológico,
+                                                experta en crear personajes
+                                                inquietantes de moralidad
+                                                ambigua.
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+        <script>
+            const hoy = new Date();
+            const año = hoy.getFullYear();
+            const mes = hoy.getMonth();
+            const diasEnMes = new Date(año, mes + 1, 0).getDate();
+            const primerDia = new Date(año, mes, 1).getDay();
+            const primerViernes = [];
+            for (let d = 1; d <= diasEnMes; d++) {
+                const diaSemana = new Date(año, mes, d).getDay();
+                if (diaSemana === 5) {
+                    primerViernes.push(d);
+                    break;
+                }
+            }
+            const inicio = primerDia === 0 ? 6 : primerDia - 1;
+            const reunion = []; // lunes, miércoles, viernes
+
+            let html = "<tr>";
+            for (let i = 0; i < inicio; i++) html += "<td></td>";
+            let col = inicio;
+
+            for (let dia = 1; dia <= diasEnMes; dia++) {
+                const fecha = new Date(año, mes, dia);
+                const diaSemana = fecha.getDay() === 0 ? 6 : fecha.getDay() - 1;
+                const esReunion = primerViernes.includes(dia);
+                const esHoy = dia === hoy.getDate();
+                html += `<td class="${esHoy ? "hoy" : ""}">${dia}${esReunion ? '<br><i class="bi bi-book-half"></i>' : ""}</td>`;
+                col++;
+                if (col % 7 === 0 && dia !== diasEnMes) html += "</tr><tr>";
+            }
+
+            while (col % 7 !== 0) {
+                html += "<td></td>";
+                col++;
+            }
+            html += "</tr>";
+            document.getElementById("calendario-body").innerHTML = html;
+        </script>
+    </body>
+</html>

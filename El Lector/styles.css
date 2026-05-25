@@ -1,0 +1,452 @@
+:root {
+    --color-fondo: #ebe3d5;
+    --color-oscuro: #2c1f0e;
+    --color-medio: #6b4c2a;
+    --color-acento: #c8a96e;
+    --color-texto: #3d2b1f;
+    --color-suave: #e8dcc8;
+}
+
+body {
+    background-color: var(--color-fondo);
+    color: var(--color-texto);
+    font-family: "Lato", sans-serif;
+    font-weight: 300;
+    padding-top: 70px;
+}
+
+h1,
+h2,
+h3 {
+    font-family: "Playfair Display", serif;
+    color: var(--color-oscuro);
+}
+
+header {
+    border-color: var(--color-acento) !important;
+}
+
+header a {
+    color: var(--color-oscuro) !important;
+    letter-spacing: 1px;
+}
+
+header i {
+    color: var(--color-medio);
+}
+
+.p-5.bg-body-tertiary {
+    background-color: var(--color-suave) !important;
+    border-left: 4px solid var(--color-acento);
+}
+
+.p-5.bg-body-tertiary h1 {
+    color: var(--color-oscuro);
+    font-size: 3rem;
+}
+
+.p-5.bg-body-tertiary p {
+    color: var(--color-medio);
+}
+
+.text-bg-dark {
+    background-color: var(--color-oscuro) !important;
+    color: var(--color-acento) !important;
+}
+
+.text-bg-dark h2 {
+    color: var(--color-acento) !important;
+}
+
+.text-bg-dark p {
+    color: var(--color-suave) !important;
+}
+
+.bg-body-tertiary.border {
+    background-color: var(--color-suave) !important;
+    border-color: var(--color-acento) !important;
+}
+
+.bg-body-tertiary.border h2 {
+    color: var(--color-oscuro);
+}
+
+.bg-body-tertiary.border p {
+    color: var(--color-medio);
+}
+
+footer {
+    border-color: var(--color-acento) !important;
+    color: var(--color-medio) !important;
+    font-style: italic;
+    letter-spacing: 1px;
+}
+
+.btn-primary {
+    background-color: var(--color-medio) !important;
+    border-color: var(--color-medio) !important;
+    color: var(--color-fondo) !important;
+}
+
+.btn-primary:hover {
+    background-color: var(--color-oscuro) !important;
+    border-color: var(--color-oscuro) !important;
+}
+
+.btn-outline-light {
+    border-color: var(--color-acento) !important;
+    color: var(--color-acento) !important;
+}
+
+.btn-outline-light:hover {
+    background-color: var(--color-acento) !important;
+    color: var(--color-oscuro) !important;
+}
+
+.btn-outline-secondary {
+    border-color: var(--color-medio) !important;
+    color: var(--color-medio) !important;
+}
+
+.btn-outline-secondary:hover {
+    background-color: var(--color-medio) !important;
+    color: var(--color-fondo) !important;
+}
+
+header.border-bottom {
+    border-color: var(--color-acento) !important;
+}
+
+.p-5.bg-body-tertiary {
+    box-shadow: 0 4px 15px rgba(44, 31, 14, 0.15);
+}
+
+.text-bg-dark {
+    box-shadow: 0 4px 15px rgba(44, 31, 14, 0.2);
+}
+
+.bg-body-tertiary.border {
+    box-shadow: 0 4px 15px rgba(44, 31, 14, 0.15);
+}
+
+.p-5.bg-body-tertiary,
+.text-bg-dark,
+.bg-body-tertiary.border {
+    transition:
+        transform 0.3s ease,
+        box-shadow 0.3s ease;
+}
+
+.p-5.bg-body-tertiary:hover,
+.text-bg-dark:hover,
+.bg-body-tertiary.border:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 25px rgba(44, 31, 14, 0.25);
+}
+
+.navbar {
+    background-color: var(--color-oscuro);
+    border-bottom: 2px solid var(--color-acento);
+}
+
+.navbar-brand {
+    color: var(--color-acento) !important;
+}
+
+.nav-link {
+    color: var(--color-suave) !important;
+    letter-spacing: 1px;
+}
+
+.nav-link:hover {
+    color: var(--color-acento) !important;
+}
+
+.navbar-toggler {
+    border-color: var(--color-acento) !important;
+}
+
+.navbar-toggler-icon {
+    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='%23c8a96e' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e") !important;
+}
+
+.row.align-items-md-stretch {
+    gap: 1.5rem 0;
+}
+
+.modal-content {
+    background-color: var(--color-fondo);
+    border: 1px solid var(--color-acento);
+}
+
+.modal-header {
+    border-bottom-color: var(--color-acento);
+}
+
+.modal-footer {
+    border-top-color: var(--color-acento);
+}
+
+.modal-title {
+    font-family: "Playfair Display", serif;
+    color: var(--color-oscuro);
+}
+
+.form-control,
+.form-select {
+    background-color: var(--color-suave);
+    border-color: var(--color-acento);
+    color: var(--color-texto);
+}
+
+.form-control:focus,
+.form-select:focus {
+    border-color: var(--color-medio);
+    box-shadow: 0 0 0 0.25rem rgba(200, 169, 110, 0.25);
+}
+
+.form-label {
+    color: var(--color-medio);
+    font-weight: 400;
+}
+
+#lecturas h2 {
+    font-family: "Playfair Display", serif;
+    color: var(--color-oscuro);
+}
+
+#lecturas h4 {
+    color: var(--color-medio);
+    border-left: 3px solid var(--color-acento);
+    padding-left: 0.75rem;
+}
+
+#lecturas .card {
+    background-color: var(--color-suave);
+    border: 1px solid var(--color-acento);
+    transition:
+        transform 0.3s ease,
+        box-shadow 0.3s ease;
+}
+
+#lecturas .card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 25px rgba(44, 31, 14, 0.2);
+}
+
+#lecturas .card-title {
+    font-family: "Playfair Display", serif;
+    color: var(--color-oscuro);
+}
+
+#lecturas .card-text {
+    color: var(--color-medio);
+}
+
+#lecturas .col-md-9 h3 {
+    font-family: "Playfair Display", serif;
+    color: var(--color-oscuro);
+}
+
+#lecturas .col-md-9 p {
+    color: var(--color-medio);
+}
+
+#lecturas .card-img-top {
+    height: 300px;
+    object-fit: cover;
+}
+
+#calendario h2 {
+    font-family: "Playfair Display", serif;
+    color: var(--color-oscuro);
+}
+
+#calendario table {
+    border-collapse: separate;
+    border-spacing: 4px;
+}
+
+#calendario thead th {
+    background-color: var(--color-oscuro);
+    color: var(--color-acento);
+    padding: 0.75rem;
+}
+
+#calendario tbody td {
+    background-color: var(--color-suave);
+    border: 1px solid var(--color-acento);
+    padding: 0.75rem;
+    color: var(--color-texto);
+    min-width: 60px;
+}
+
+#calendario tbody td.hoy {
+    background-color: var(--color-acento);
+    color: var(--color-oscuro);
+    font-weight: bold;
+}
+
+#calendario tbody td i {
+    color: var(--color-medio);
+    font-size: 1.1rem;
+}
+
+#lecturas .card {
+    box-shadow: 0 4px 15px rgba(44, 31, 14, 0.15);
+}
+
+.libro-actual {
+    transition:
+        transform 0.3s ease,
+        box-shadow 0.3s ease;
+    box-shadow: 0 4px 15px rgba(44, 31, 14, 0.2);
+}
+
+.libro-actual:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 25px rgba(44, 31, 14, 0.35);
+}
+
+.text-bg-dark {
+    box-shadow: 0 4px 20px rgba(44, 31, 14, 0.5) !important;
+}
+
+#calendario .table-responsive {
+    direction: ltr;
+}
+
+hr {
+    border-color: var(--color-acento);
+    opacity: 0.5;
+}
+
+.text-bg-dark.border {
+    border-color: var(--color-acento) !important;
+}
+
+.text-bg-dark.border,
+.bg-body-tertiary.border {
+    border-width: 2px !important;
+}
+
+#lecturas .card,
+hr {
+    border-width: 2px !important;
+}
+
+header.border-bottom,
+.navbar {
+    border-bottom-width: 2px !important;
+}
+
+#alerta-envio {
+    background-color: var(--color-suave);
+    border-color: var(--color-acento);
+    color: var(--color-medio);
+}
+
+#calendario tbody td,
+#calendario thead th {
+    width: 14.28%;
+    height: 60px;
+    text-align: center;
+}
+
+.modal-body .card {
+    background-color: var(--color-suave);
+    border: 2px solid var(--color-acento);
+    transition:
+        transform 0.3s ease,
+        box-shadow 0.3s ease;
+}
+
+.modal-body .card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 25px rgba(44, 31, 14, 0.2);
+}
+
+.modal-body .card-title {
+    font-family: "Playfair Display", serif;
+    color: var(--color-oscuro);
+}
+
+.modal-body .card-text {
+    color: var(--color-medio);
+}
+
+.modal-body .card {
+    box-shadow: 0 4px 15px rgba(44, 31, 14, 0.2);
+}
+
+.cita-libro {
+    border-left: 3px solid var(--color-acento);
+    padding: 1.5rem;
+    background-color: var(--color-suave);
+    border-radius: 0.5rem;
+    box-shadow: 0 4px 15px rgba(44, 31, 14, 0.15);
+}
+
+.cita-libro p {
+    font-family: "Playfair Display", serif;
+    color: var(--color-oscuro);
+    font-style: italic;
+    font-size: 1.1rem;
+}
+
+.cita-libro footer {
+    color: var(--color-medio);
+    font-size: 0.9rem;
+    margin-top: 0.75rem;
+}
+
+.cita-libro {
+    transition:
+        transform 0.3s ease,
+        box-shadow 0.3s ease;
+    cursor: default;
+}
+
+.cita-libro:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 25px rgba(44, 31, 14, 0.25);
+}
+
+.card-img-container {
+    position: relative;
+    height: 300px;
+    overflow: hidden;
+    border-radius: 0.375rem 0.375rem 0 0;
+}
+
+.card-img-bg {
+    position: absolute;
+    inset: 0;
+    background-size: cover;
+    background-position: center;
+    filter: blur(8px) brightness(0.7);
+    transform: scale(1.1);
+}
+
+.card-img-front {
+    position: absolute;
+    inset: 0;
+    margin: auto;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    max-height: 90%;
+    width: auto;
+    object-fit: contain;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.4);
+}
+
+.modal-body .card-img-top {
+    height: 200px;
+    object-fit: cover;
+}
+
+.fowles-img {
+    object-position: center 20%;
+}
