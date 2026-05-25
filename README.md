@@ -13,3 +13,6 @@ A simple HTML, CSS and Bootstrap page displaying a men's fragrance store in Boot
 
 ### Bass by ALex
 A simple HTML, CSS and Bootstrap page displaying a personal blog about electric base in Bootstrap blog page format.
+
+### El Lector
+A simple HTML, CSS and Bootstrap page displaying a reading club page in Bootstrap jumbotron page format.
